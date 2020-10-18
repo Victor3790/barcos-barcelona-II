@@ -1,0 +1,21 @@
+body {
+    min-width: 360px;
+    font-family: Tw Cen MT,Arial,sans-serif!important; }
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: 70px; }
+
+.hero--home {
+  background-image: url('../imgs/hero_xs.jpg');
+}
+
+@media (min-width: 768px) {
+  .hero--home {
+    background-image: url('../imgs/hero.jpg');
+  }
+}
+

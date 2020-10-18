@@ -1,0 +1,96 @@
+.section__picture {
+  width: 100%;
+  overflow: hidden; }
+
+.section__picture--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.section__picture__img {
+  margin: 0;
+  height: 400px; }
+
+.section__text {
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  text-align: center; }
+
+.section__form {
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 55px; }
+
+.section__form__label {
+  margin-top: 25px; }
+
+.section__form__input {
+  width: 100%;
+  border-radius: 0;
+  background-color: #434343;
+  color: #999;
+  border: 0; }
+
+.section__form__button {
+  color: #B9874C;
+  border: 1px solid #B9874C;
+  padding: 6px 10px;
+  margin-top: 14px;
+  background-color: #000; }
+
+.section__contact {
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 55px; }
+
+.section__contact__info-group {
+  list-style-type: none;
+  margin-top: 33px; }
+
+.section__ships {
+  width: 100%;
+  padding-top: 55px;
+  padding-bottom: 55px; }
+
+@media (min-width: 576px) {
+  .section__picture__img {
+    width: 800px;
+    height: 600px; } }
+
+@media (min-width: 768px) {
+  .section__picture {
+    width: 65%;
+    overflow: hidden; }
+  .section__picture__img {
+    width: 890px;
+    height: 600px; }
+  .section__text {
+    width: 35%;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    text-align: left; }
+  .section__text {
+    text-align: left; }
+  .section__form {
+    width: 65%;
+    float: left; }
+  .section__form__input {
+    width: 90%; }
+  .section__contact {
+    width: 35%;
+    float: left; }
+  .section--left {
+    float: left; }
+  .section--right {
+    float: right; } }
+
+@media (min-width: 1200px) {
+  .section__picture {
+    width: 890px; }
+  .section__text {
+    width: calc(100% - 890px); } }
+

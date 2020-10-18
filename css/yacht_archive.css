@@ -1,0 +1,29 @@
+.cards {
+  padding-top: 55px; }
+
+.card {
+  width: 100%;
+  margin-bottom: 25px;
+  overflow: hidden; }
+
+.card__image {
+  width: 100%; }
+
+.card__info {
+  padding: 15px; }
+
+.card__title {
+  text-align: center;
+  margin: 0; }
+
+.card__text {
+  text-align: center; }
+
+@media (min-width: 768px) {
+  .card {
+    margin-bottom: 35px; } }
+
+@media (min-width: 992px) {
+  .card {
+    margin-bottom: 40px; } }
+
