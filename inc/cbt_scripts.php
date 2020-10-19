@@ -41,6 +41,9 @@ function cbt_scripts() {
 		wp_enqueue_style( THEME_NAME . '_single', 
 						  THEME_URI . '/css/single_yacht.css' );
 
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -45,7 +45,8 @@
 			</div>
 		</nav>
 		<div class="header__logo">
-			<img class="header__logo__img" src="<?php echo THEME_URI; ?>/imgs/logo.png" alt="">
+			<!--<img class="header__logo__img" src="<?php echo THEME_URI; ?>/imgs/logo.png" alt="">-->
+			<?php the_custom_logo(); ?>
 		</div>
 		<div class="header__search">
 			<img src="<?php echo THEME_URI; ?>/imgs/lupa.png" alt="" style="width: 20px;">

@@ -28,6 +28,12 @@ add_action( 'get_footer', 'cbt_scripts_footer' );
 include (get_theme_file_path('/inc/cbt_customizer.php'));
 add_action( 'customize_register', 'cbt_customizer' );
 
+include (get_theme_file_path('/inc/cbt_header_styles.php'));
+add_action( 'wp_head', 'cbt_header_styles' );
+
+include (get_theme_file_path('/inc/cbt_custom_logo.php'));
+add_filter( 'get_custom_logo', 'cbt_custom_logo' );
+
 /**
  * Implement the Custom Header feature.
  */
