@@ -12,15 +12,14 @@
                    890px">
     </div>
     <div class="section__text section--justified section--left">
-      <h2>YACHT CHARTERS</h2>
+      <h2>ALQUILER DE YATES</h2>
       <p>
-        Your passport to some of the most beautiful and remote 
-        parts of the world… Tailored to meet your lifestyle 
-        preferences and desires. Pure freedom, scheduled around 
-        you. Flexibility incorporated into each day. Customized 
-        service that is second to none. Experience yachting, the 
-        best personalized form of vacation in the world.
-        … leave it to us to make your dream come true!
+	En Barcos Barcelona S.L., ofrecemos servicio de alquiler de yates y alquiler 
+	de barcos en los destinos más impresionantes y exclusivos del Mediterráneo, 
+	Caribe y Bahamas, Maldivas,... Disponemos de una amplia selección de alquiler 
+	de yates, alquiler de megayates, alquiler de veleros, alquiler de goletas y 
+	catamaranes únicos. Disfrute de un servicio totalmente personalizado, diseñado 
+	para cubrir todas sus necesidades
       </p>
     </div>
   </div>
@@ -37,15 +36,14 @@
                    890px">
     </div>
     <div class="section__text section--justified section--right">
-      <h2>YACHT CHARTERS</h2>
+      <h2>TITULO 2</h2>
       <p>
-        Your passport to some of the most beautiful and remote 
-        parts of the world… Tailored to meet your lifestyle 
-        preferences and desires. Pure freedom, scheduled around 
-        you. Flexibility incorporated into each day. Customized 
-        service that is second to none. Experience yachting, the 
-        best personalized form of vacation in the world.
-        … leave it to us to make your dream come true!
+	Viva una experiencia inolvidable navegando por los destinos más exclusivos 
+	del Mediterráneo y Caribe con nuestro servicio de alquiler de yates en Ibiza, 
+	alquiler de yates en Mallorca, alquiler de yates en Menorca, alquiler de yates 
+	en Barcelona, yates de alquiler en Costa Brava, yates de alquiler en Caribe, 
+	yates de alquiler en Bahamas, yates de alquiler en Rivera Francesa, barcos de 
+	alquiler en Cerdeña, barcos de alquiler en Grecia.
       </p>
     </div>
   </div>
@@ -62,15 +60,12 @@
                    890px">
     </div>
     <div class="section__text section--justified section--left">
-      <h2>YACHT CHARTERS</h2>
+      <h2>MÁS SOBRE NOSOTROS</h2>
       <p>
-        Your passport to some of the most beautiful and remote 
-        parts of the world… Tailored to meet your lifestyle 
-        preferences and desires. Pure freedom, scheduled around 
-        you. Flexibility incorporated into each day. Customized 
-        service that is second to none. Experience yachting, the 
-        best personalized form of vacation in the world.
-        … leave it to us to make your dream come true!
+	Somos una empresa de reconocido prestigio a nivel mundial. las un formado 
+	por un equipo de expertos profesionales especializados en proporcionar 
+	asesoramiento y asistencia en cualquier aspecto relacionado con el alquiler 
+	de yates y la gestión integral de su barco.
       </p>
     </div>
   </div>
@@ -87,15 +82,13 @@
                    890px">
     </div>
     <div class="section__text section--justified section--right">
-      <h2>YACHT CHARTERS</h2>
+      <h2>ACTIVIDADES</h2>
       <p>
-        Your passport to some of the most beautiful and remote 
-        parts of the world… Tailored to meet your lifestyle 
-        preferences and desires. Pure freedom, scheduled around 
-        you. Flexibility incorporated into each day. Customized 
-        service that is second to none. Experience yachting, the 
-        best personalized form of vacation in the world.
-        … leave it to us to make your dream come true!
+	En Barcos Barcelona S.L, podemos organizar un evento corporativo, 
+	presentaciones de producto, reuniones de negocio o programas de incentivos 
+	a bordo de uno de nuestros yates. Una manera diferente y original de sorprender 
+	a sus empleados, colaboradores o clientes. Consulte disponibilidad y precios de 
+	toda la flota barcos de alquiler. 
       </p>
     </div>
   </div>

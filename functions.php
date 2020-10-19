@@ -34,6 +34,9 @@ add_action( 'wp_head', 'cbt_header_styles' );
 include (get_theme_file_path('/inc/cbt_custom_logo.php'));
 add_filter( 'get_custom_logo', 'cbt_custom_logo' );
 
+include (get_theme_file_path('/inc/cbt_add_custom_sizes.php'));
+add_filter( 'after_setup_theme', 'cbt_add_custom_sizes' );
+
 /**
  * Implement the Custom Header feature.
  */

@@ -13,12 +13,6 @@
 	$subField = get_field('sub_especificaciones');
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="pageHeader">
-		<div class="pageHeader__title-container">
-			<?php the_title( '<h1 class="pageHeader__title">', '</h1>' ); ?>
-		</div>
-		<div class="pageHeader__bottomLine"></div>
-	</div><!-- .pageHeader -->
 	<div class="entry-content content">
 		<div class="hero hero--single">
 			<div class="hero__title-wrapper">
