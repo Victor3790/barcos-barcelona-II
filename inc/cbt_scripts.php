@@ -46,6 +46,19 @@ function cbt_scripts() {
 
 	}
 
+	if(is_post_type_archive('yate')){
+
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
+		wp_enqueue_style( THEME_NAME . '_archive', 
+						  THEME_URI . '/css/yacht_archive.css' );
+
+		wp_enqueue_style( THEME_NAME . '_search', 
+						  THEME_URI . '/css/search.css' );
+
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
