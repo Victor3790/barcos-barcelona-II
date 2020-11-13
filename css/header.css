@@ -34,9 +34,14 @@
   margin: 25px 0 0 0;
   padding: 0; }
 
-.header__menu__item {
+/*.header__menu__item {*/
+.menu-item{
   padding: 13px 0;
   border-bottom: #434343 solid 1px; }
+
+.menu-item a {
+  color: #B9874C;
+}
 
 .header__menu__line {
   width: 22px;

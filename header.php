@@ -34,14 +34,21 @@
 			<div class="header__menu__line"></div>
 			</div>
 			<div class="header__menu">
-			<div class="header__menu__close">
-				<div class="close"></div>
-			</div>
-			<ul class="header__menu__list">
-				<li class="header__menu__item">CHARTER</li>
-				<li class="header__menu__item">SALES</li>
-				<li class="header__menu__item">ABOUT US</li>
-			</ul>
+				<div class="header__menu__close">
+					<div class="close"></div>
+				</div>
+				<!--<ul class="header__menu__list">-->
+					<!--<li class="header__menu__item">CHARTER</li>
+					<li class="header__menu__item">SALES</li>
+					<li class="header__menu__item">ABOUT US</li>-->
+					<?php
+						wp_nav_menu( array(
+							'theme_location' => 'menu-1',
+							'menu_id'        => 'primary-menu',
+							'menu_class'	   => 'header__menu__list',
+						) );
+					?>
+				<!--</ul>-->
 			</div>
 		</nav>
 		<div class="header__logo">
