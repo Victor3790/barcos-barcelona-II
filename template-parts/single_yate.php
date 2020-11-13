@@ -9,8 +9,9 @@
 
 ?>
 <?php
-	$fields = get_field_objects();
-	$subField = get_field('sub_especificaciones');
+	$specifications = get_field_objects();
+	$accommodation = get_field('accommodation');
+	$charter_info = get_field('charter_info');
 	$attachments = get_posts( 
 						array( 
 							'post_type' => 'attachment', 
@@ -86,15 +87,34 @@
 			<div class="row">
 			<div class="col-12 col-md-6">
 				<ul class="yacht-info__list">
-				<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
-				<li class="yacht-info__list__item">
-					<span class="yacht-info__list__item-name">Eslora:</span>
-					<strong class="yacht-info__list__item-info"><?php the_field('eslora'); ?></strong>
-				</li>
-				<li class="yacht-info__list__item">
-					<span class="yacht-info__list__item-name">Manga:</span>
-					<strong class="yacht-info__list__item-info"><?php the_field('manga'); ?></strong>
-				</li>
+					<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
+					<!--<li class="yacht-info__list__item">
+						<span class="yacht-info__list__item-name">Eslora:</span>
+						<strong class="yacht-info__list__item-info"><?php //the_field('eslora'); ?></strong>
+					</li>
+					<li class="yacht-info__list__item">
+						<span class="yacht-info__list__item-name">Manga:</span>
+						<strong class="yacht-info__list__item-info"><?php //the_field('manga'); ?></strong>
+					</li>-->
+					<?php 
+						if( $specifications ){
+							foreach ( $specifications as $specification ) {
+								if( $specification['value'] && 
+									!is_array( $specification['value'] ) && 
+									!is_numeric( $specification['value'] ) ) {
+										
+										echo	'<li class="yacht-info__list__item">'. 
+												'<span class="yacht-info__list__item-name">' .
+												$specification['label'] . 
+												'</span>' . 
+												'<strong class="yacht-info__list__item-info">' . 
+												$specification['value'] . 
+												'</strong>'  . 
+												'</li>';
+								}
+							}
+						}
+					?>
 				</ul>
 			</div>
 			<div class="col-12 col-md-6">
@@ -102,15 +122,21 @@
 					<li class="yacht-info__list__item yacht-info--bold">ALOJAMIENTO</li>
 					<li class="yacht-info__list__item">
 						<span class="yacht-info__list__item-name">Camarotes</span>
-						<strong class="yacht-info__list__item-info"><?php echo $subField['camarotes']; ?></strong>
+						<strong class="yacht-info__list__item-info">
+							<?php echo $accommodation['camarotes']; ?>
+						</strong>
 					</li>
 					<li class="yacht-info__list__item">
 						<span class="yacht-info__list__item-name">Invitados:</span>
-						<strong class="yacht-info__list__item-info"><?php echo $subField['invitados']; ?></strong>
+						<strong class="yacht-info__list__item-info">
+							<?php echo $accommodation['invitados']; ?>
+						</strong>
 					</li>
 					<li class="yacht-info__list__item">
 						<span class="yacht-info__list__item-name">Tripulación:</span>
-						<strong class="yacht-info__list__item-info"><?php echo $subField['tripulacion']; ?></strong>
+						<strong class="yacht-info__list__item-info">
+							<?php echo $accommodation['tripulacion']; ?>
+						</strong>
 					</li>
 				</ul>
 			</div>
@@ -127,7 +153,7 @@
 						</span>
 					</li>
 					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name"><?php the_field('precio'); ?></span>
+						<span class="yacht-info__list__item-name"><?php echo $charter_info['price'] ?></span>
 					</li>
 				</ul>
 				<ul class="yacht-info__list" style="margin-top: 38px;">
@@ -137,7 +163,7 @@
 						</span>
 					</li>
 					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name"><?php the_field('area'); ?></span>
+						<span class="yacht-info__list__item-name"><?php echo $charter_info['cruising_areas'] ?></span>
 					</li>
 				</ul>
 			</div>
