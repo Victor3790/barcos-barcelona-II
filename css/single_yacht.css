@@ -1,3 +1,19 @@
+.section__picture {
+  width: 100%;
+  overflow: hidden; }
+
+.section__picture--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.section__picture__img {
+  margin: 0;
+  width: 540px; }
+
 .yacht-info {
   padding-top: 55px;
   padding-bottom: 55px; }
@@ -25,11 +41,16 @@
   border-bottom: 1px solid #434343; }
 
 .yacht-info__list__item-name {
-  width: 50%; }
+  width: 100%; }
 
 .yacht-info__list__item-info {
   width: 50%;
   text-align: right; }
+
+@media (min-width: 576px) { 
+  .section__picture__img {
+    margin: 0;
+    width: 740px; }}
 
 @media (min-width: 768px) {
   .yacht-info {
@@ -37,17 +58,26 @@
     float: left; }
   .charter-info {
     width: 40%;
-    float: left; } }
+    float: left; } 
+  .section__picture__img {
+    margin: 0;
+    width: 1040px; }}
 
 @media (min-width: 992px) {
   .yacht-info {
     width: 65%; }
   .charter-info {
-    width: 35%; } }
+    width: 35%; } 
+  .section__picture__img {
+    margin: 0;
+    width: 1340px; }}
 
 @media (min-width: 1200px) {
   .yacht-info {
     width: 68%; }
   .charter-info {
-    width: 32%; } }
+    width: 32%; }
+  .section__picture__img {
+    margin: 0;
+    width: 1540px; }}
 

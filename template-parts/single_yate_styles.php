@@ -6,11 +6,11 @@
 
 global $post;
 
-$bg_large                   = get_the_post_thumbnail_url( $post->ID, 'cbt_large' );
-$bg_small                   = get_the_post_thumbnail_url( $post->ID, 'cbt_small');
-$bg_small_retina            = get_the_post_thumbnail_url( $post->ID, 'cbt_small_retina');
-$bg_small_landscape         = get_the_post_thumbnail_url( $post->ID, 'cbt_small_landscape');
-$bg_small_landscape_retina  = get_the_post_thumbnail_url( $post->ID, 'cbt_small_landscape_retina');
+$bg_large                   = get_the_post_thumbnail_url( $post->ID, 'cbt_xl' );
+$bg_small                   = get_the_post_thumbnail_url( $post->ID, 'cbt_xs');
+$bg_small_retina            = get_the_post_thumbnail_url( $post->ID, 'cbt_md');
+$bg_small_landscape         = get_the_post_thumbnail_url( $post->ID, 'cbt_lg');
+$bg_small_landscape_retina  = get_the_post_thumbnail_url( $post->ID, 'cbt_xl');
 ?>
 <style type="text/css">
     .hero--single
