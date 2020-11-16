@@ -169,7 +169,7 @@
 			</div>
 			</div>
 		</div>
-		<div class="section__picture section__picture--center">
+		<div>
 			<?php 
 				if( isset($chunk_2) ){
 					foreach ( $chunk_2 as $item ) {
@@ -195,11 +195,14 @@
 	
 						$alt = the_title(null, null, false);
 	
-						echo 	'<img srcset = "' . $srcset . 
+						echo 	'<div class="section__picture section__picture--center">' .
+								'<img class="section__picture__img"' .
+								'srcset = "' . $srcset . 
 								'" sizes = "' . $sizes . 
 								'" src = "' . $src . 
 								'" alt = "' . $alt . 
-								'">';
+								'">' . 
+								'</div>';
 					}
 				}
 			?>
