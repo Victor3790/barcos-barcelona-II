@@ -43,7 +43,6 @@ function cbt_scripts() {
 
 		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
 						  THEME_URI . '/css/bootstrap_grid.css' );
-
 	}
 
 	if(is_post_type_archive('yate')){
@@ -54,9 +53,24 @@ function cbt_scripts() {
 		wp_enqueue_style( THEME_NAME . '_archive', 
 						  THEME_URI . '/css/yacht_archive.css' );
 
-		wp_enqueue_style( THEME_NAME . '_search', 
+
+		wp_enqueue_style( THEME_NAME . '_slider', 
+						  'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css' );
+
+		wp_enqueue_style( THEME_NAME . '_search_style', 
 						  THEME_URI . '/css/search.css' );
 
+		wp_enqueue_script ( THEME_NAME . '_search_slider',
+						  THEME_URI . '/js/search_slider.js',
+						  array('jquery-ui-slider', 'jquery'),
+						  false,
+						  true );
+
+		wp_enqueue_script ( THEME_NAME . '_search',
+						  THEME_URI . '/js/search.js',
+						  array(THEME_NAME . '_search_slider'),
+						  false,
+						  true );
 	}
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
