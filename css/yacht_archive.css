@@ -10,9 +10,6 @@
   margin-bottom: 25px;
   overflow: hidden; }
 
-.card__image {
-  width: 100%; }
-
 .card__info {
   padding: 15px; }
 
@@ -20,7 +17,7 @@
   text-align: center;
   margin: 0; }
 
-.card__info a:hover{
+.card a:hover{
   text-decoration: none; }
 
 .card__text {
@@ -29,6 +26,14 @@
 
 .card--upper {
   text-transform: uppercase; }
+
+.card__picture--center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 @media (min-width: 768px) {
   .hero--archive
