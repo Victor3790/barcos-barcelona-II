@@ -35,8 +35,8 @@
 
 .slider__handle {
   display: block;
-  width: 13px !important;
-  height: 13px !important;
+  width: 20px !important;
+  height: 20px !important;
   border-radius: 50%; }
 
 .slider__bar {
@@ -89,6 +89,9 @@
   color: #B9874C;
   border: 1px solid #B9874C; }
 
+#length_slider{
+  margin: 50px 0;}
+
 @media (min-width: 992px) {
   .slider__title {
     margin: 5px 0; }
@@ -96,5 +99,10 @@
     margin: 5px 0; }
   .search__title {
     font-size: 25px;
-    padding: 25px 0; } }
+    padding: 25px 0; } 
+  .slider__handle {
+    width: 13px !important;
+    height: 13px !important; }
+  #length_slider{
+    margin:0;}}
 

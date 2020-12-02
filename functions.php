@@ -37,6 +37,11 @@ add_filter( 'get_custom_logo', 'cbt_custom_logo' );
 include (get_theme_file_path('/inc/cbt_add_custom_sizes.php'));
 add_filter( 'after_setup_theme', 'cbt_add_custom_sizes' );
 
+include (get_theme_file_path('/inc/cbt_query_vars.php'));
+add_filter( 'query_vars', 'cbt_query_vars' );
+
+include (get_theme_file_path('/inc/cbt_search_query.php'));
+add_filter( 'pre_get_posts', 'cbt_search_query' );
 /**
  * Implement the Custom Header feature.
  */

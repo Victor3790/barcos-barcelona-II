@@ -62,7 +62,7 @@ function cbt_scripts() {
 
 		wp_enqueue_script ( THEME_NAME . '_search_slider',
 						  THEME_URI . '/js/search_slider.js',
-						  array('jquery-ui-slider', 'jquery'),
+						  array('jquery-touch-punch', 'jquery-ui-slider', 'jquery'),
 						  false,
 						  true );
 

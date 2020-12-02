@@ -43,6 +43,9 @@ jQuery(document).ready(function($){
             actual_slider.slider('option','max',this.options.max);
             actual_slider.slider('option','values', [this.options.min, this.options.max]);
             this.element.find('.slider__range').val( this.options.min + ' - ' + this.options.max );
+
+            $(this.options.min_form_input).val( this.options.min );
+            $(this.options.max_form_input).val( this.options.max );
             
             this._on(
                 actual_slider, 
@@ -50,6 +53,8 @@ jQuery(document).ready(function($){
                     'slide': function(event,ui){
                                 this.element.find('.slider__range')
                                             .val( ui.values[0] + '-' + ui.values[1] );
+                                $(this.options.min_form_input).val( ui.values[0] );
+                                $(this.options.max_form_input).val( ui.values[1] );
                     }
                 }
             );
