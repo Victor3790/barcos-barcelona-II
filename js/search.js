@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 
     $('#length_slider').ship_slider({
         title:'LARGO (METROS)', 
-        min:13, 
+        min:1, 
         max:99,
         min_form_input: '#min_length',
         max_form_input: '#max_length'

@@ -1,5 +1,6 @@
 <?php
 function cbt_query_vars( $vars ){
+  $vars[] = 'search_id';
   $vars[] = 'ship_type';
   $vars[] = 'min_rate';
   $vars[] = 'max_rate';
