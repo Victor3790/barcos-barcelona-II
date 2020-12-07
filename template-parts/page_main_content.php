@@ -93,18 +93,9 @@
     </div>
   </div>
   <div class="section section--justified section--dark">
-    <div class="section__form">
+    <div class="section__form" style="width:65%;">
       <h2>Envianos un mensaje.</h2>
-      <form>
-        <label class="section__form__label" for="name">Nombre</label><br>
-        <input class="section__form__input" type="text"><br>
-        <label class="section__form__label" for="mail">Correo</label><br>
-        <input class="section__form__input" type="text"><br>
-        <label class="section__form__label" for="message">Mensaje</label><br>
-        <textarea class="section__form__input" name="message" id="" cols="30" rows="8">
-        </textarea><br>
-        <input class="section__form__button" type="submit" value="Enviar mensaje">
-      </form>
+      <?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
     </div>
     <div class="section__contact">
       <h2>Contacto.</h2>

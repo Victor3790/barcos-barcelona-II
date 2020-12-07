@@ -1,0 +1,28 @@
+.section__form {
+    /*width: 65%;*/
+    padding-top: 55px;
+    padding-bottom: 55px; }
+
+.section__form__label {
+    width: 95%;
+    margin: 0; }
+  
+.section__form__input {
+    width: 100%;
+    border-radius: 0;
+    background-color: #434343;
+    color: #999;
+    border: 0; }
+  
+.section__form__button {
+    color: #B9874C;
+    border: 1px solid #B9874C;
+    padding: 6px 10px;
+    margin-top: 14px;
+    background-color: #000; }
+
+.section__form__acceptance-link {
+    color: #999;}
+
+.section__form__acceptance-link:hover {
+    color: #999;}

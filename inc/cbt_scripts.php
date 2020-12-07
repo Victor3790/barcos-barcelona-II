@@ -43,6 +43,9 @@ function cbt_scripts() {
 
 		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
 						  THEME_URI . '/css/bootstrap_grid.css' );
+
+		wp_enqueue_style( THEME_NAME . '_form', 
+						  THEME_URI . '/css/form.css' );
 	}
 
 	if(is_post_type_archive('yate')){
