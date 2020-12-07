@@ -60,5 +60,4 @@ function cbt_search_query( $query ){
 
   if( count( $meta_query ) > 0 )
     $query->set('meta_query', $meta_query);
-  
 }
