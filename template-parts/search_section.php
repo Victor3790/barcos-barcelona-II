@@ -37,14 +37,21 @@
               </div>
               <div class="col-12 col-lg-4">
                 <p class="search__select-title">DESTINO</p>
-                <select class="search__select" name="ship_type" id="">
+                <select class="search__select" name="cruising_area" id="">
                   <option value="0">Seleccione destino </option>
-                  <option value="1">Pácifico sur</option>
-                  <option value="2">Medio oriente</option>
-                  <option value="3">Mar mediterraneo</option>
+                  <?php
+                    $areas = get_field_object('cruising_areas', 165, true, false);
+                    if( !empty( $areas ) ):
+                  ?>
+                    <?php foreach ( $areas['choices'] as $value => $label ) : ?>
+                      <option value="<?php echo esc_html( $value ); ?>">
+                        <?php echo esc_html( $label ); ?>
+                      </option>
+                    <?php endforeach; ?>
+                  <?php endif; ?>
                 </select>
               </div>
-                <div class="search__button__container col-12 col-lg-4">
+              <div class="search__button__container col-12 col-lg-4">
                 <input type="hidden" name="post_type"   value="yate">
                 <input type="hidden" name="min_rate"    id="min_rate">
                 <input type="hidden" name="max_rate"    id="max_rate">

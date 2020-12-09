@@ -10,6 +10,8 @@
 define ( 'THEME_NAME', 'barcos_barcelona' );
 define ( 'THEME_URI', get_template_directory_uri() );
 
+//Action hooks
+
 include (get_theme_file_path('/inc/cbt_setup.php'));
 add_action( 'after_setup_theme', 'cbt_setup' );
 
@@ -31,6 +33,11 @@ add_action( 'customize_register', 'cbt_customizer' );
 include (get_theme_file_path('/inc/cbt_header_styles.php'));
 add_action( 'wp_head', 'cbt_header_styles' );
 
+include (get_theme_file_path('/inc/cbt_set_cruising_areas.php'));
+add_action( 'acf/save_post', 'cbt_set_cruising_areas' );
+
+//Filter hooks
+
 include (get_theme_file_path('/inc/cbt_custom_logo.php'));
 add_filter( 'get_custom_logo', 'cbt_custom_logo' );
 
@@ -42,6 +49,7 @@ add_filter( 'query_vars', 'cbt_query_vars' );
 
 include (get_theme_file_path('/inc/cbt_search_query.php'));
 add_filter( 'pre_get_posts', 'cbt_search_query' );
+
 /**
  * Implement the Custom Header feature.
  */

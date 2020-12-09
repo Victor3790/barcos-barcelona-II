@@ -8,6 +8,7 @@ function cbt_query_vars( $vars ){
   $vars[] = 'max_length';
   $vars[] = 'min_cabins';
   $vars[] = 'max_cabins';
+  $vars[] = 'cruising_area';
 
   return $vars;
 }

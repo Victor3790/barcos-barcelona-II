@@ -17,13 +17,14 @@ function cbt_search_query( $query ){
 
   $meta_query = array();
 
-  $ship_type  = get_query_var( 'ship_type' ); 
-  $min_rate   = get_query_var( 'min_rate' ); 
-  $max_rate   = get_query_var( 'max_rate' ); 
-  $min_length = get_query_var( 'min_length' ); 
-  $max_length = get_query_var( 'max_length' ); 
-  $min_cabins = get_query_var( 'min_cabins' ); 
-  $max_cabins = get_query_var( 'max_cabins' ); 
+  $ship_type    = get_query_var( 'ship_type' ); 
+  $min_rate     = get_query_var( 'min_rate' ); 
+  $max_rate     = get_query_var( 'max_rate' ); 
+  $min_length   = get_query_var( 'min_length' ); 
+  $max_length   = get_query_var( 'max_length' ); 
+  $min_cabins   = get_query_var( 'min_cabins' ); 
+  $max_cabins   = get_query_var( 'max_cabins' ); 
+  $destination  = get_query_var( 'cruising_area' ); 
 
   if( !empty( $ship_type ) )
     $meta_query[] = array(  'key'=>'tipo_data', 
@@ -51,6 +52,11 @@ function cbt_search_query( $query ){
                             'value'=>array($min_cabins, $max_cabins), 
                             'compare'=>'BETWEEN', 
                             'type'=>'NUMERIC'  
+                          );
+
+  if( !empty( $destination ) )
+    $meta_query[] = array(  'key'=>'bb_' . $destination,  
+                            'compare'=>'EXISTS'  
                           );
 
   if( count( $meta_query ) > 1 ){
