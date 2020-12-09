@@ -12,6 +12,7 @@
 	$specifications = get_field_objects();
 	$accommodation = get_field('accommodation');
 	$charter_info = get_field('charter_info');
+	$cruising_areas = get_field('cruising_areas');
 	$attachments = get_posts( 
 						array( 
 							'post_type' => 'attachment', 
@@ -88,14 +89,6 @@
 			<div class="col-12 col-md-6">
 				<ul class="yacht-info__list">
 					<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
-					<!--<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name">Eslora:</span>
-						<strong class="yacht-info__list__item-info"><?php //the_field('eslora'); ?></strong>
-					</li>
-					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name">Manga:</span>
-						<strong class="yacht-info__list__item-info"><?php //the_field('manga'); ?></strong>
-					</li>-->
 					<?php 
 						if( $specifications ){
 							foreach ( $specifications as $specification ) {
@@ -163,7 +156,15 @@
 							</span>
 						</li>
 						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name"><?php echo $charter_info['cruising_areas'] ?></span>
+							<span class="yacht-info__list__item-name">
+								<?php 
+									foreach ($cruising_areas as $key => $element) {
+										echo $element['label'];
+										if( $key !== array_key_last($cruising_areas) )
+											echo ', ';
+									} 
+								?>
+							</span>
 						</li>
 					</ul>
 				</div>

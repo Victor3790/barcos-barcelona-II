@@ -37,10 +37,6 @@
 				<div class="header__menu__close">
 					<div class="close"></div>
 				</div>
-				<!--<ul class="header__menu__list">-->
-					<!--<li class="header__menu__item">CHARTER</li>
-					<li class="header__menu__item">SALES</li>
-					<li class="header__menu__item">ABOUT US</li>-->
 					<?php
 						wp_nav_menu( array(
 							'theme_location' => 'menu-1',
@@ -48,15 +44,19 @@
 							'menu_class'	   => 'header__menu__list',
 						) );
 					?>
-				<!--</ul>-->
 			</div>
 		</nav>
 		<div class="header__logo">
-			<!--<img class="header__logo__img" src="<?php echo THEME_URI; ?>/imgs/logo.png" alt="">-->
-			<?php the_custom_logo(); ?>
+			<img  class="header_logo__img"
+				src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
+				alt="Barcos Barcelona, Alquiler de barcos." 
+				srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 155w,
+						<?php echo THEME_URI; ?>/imgs/logo_lg.png 280w"
+				sizes=	"(max-width: 992px) 150px,
+						270px">
 		</div>
 		<div class="header__search">
-			<img src="<?php echo THEME_URI; ?>/imgs/lupa.png" alt="" style="width: 20px;">
+			<!--<img src="<?php //echo THEME_URI; ?>/imgs/lupa.png" alt="" style="width: 20px;">-->
 		</div>
 		</div>
   	</header>
