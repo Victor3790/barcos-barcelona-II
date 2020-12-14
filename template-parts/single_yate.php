@@ -13,6 +13,7 @@
 	$accommodation = get_field('accommodation');
 	$charter_info = get_field('charter_info');
 	$cruising_areas = get_field('cruising_areas');
+	$content = get_field('content');
 	$attachments = get_posts( 
 						array( 
 							'post_type' => 'attachment', 
@@ -86,53 +87,56 @@
 		<div class="section section--white section--justified yacht-info">
 			<h2 class="yacht-info__title" style="text-transform:uppercase;"><?php the_title(); ?></h2>
 			<div class="row">
-			<div class="col-12 col-md-6">
-				<ul class="yacht-info__list">
-					<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
-					<?php 
-						if( $specifications ){
-							foreach ( $specifications as $specification ) {
-								if( $specification['value'] && 
-									!is_array( $specification['value'] ) && 
-									!is_numeric( $specification['value'] ) ) {
-										
-										echo	'<li class="yacht-info__list__item">'. 
-												'<span class="yacht-info__list__item-name">' .
-												$specification['label'] . 
-												'</span>' . 
-												'<strong class="yacht-info__list__item-info">' . 
-												$specification['value'] . 
-												'</strong>'  . 
-												'</li>';
+				<div class="col-12 col-md-6">
+					<ul class="yacht-info__list">
+						<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
+						<?php 
+							if( $specifications ){
+								foreach ( $specifications as $specification ) {
+									if( $specification['value'] && 
+										!is_array( $specification['value'] ) && 
+										!is_numeric( $specification['value'] ) ) {
+											
+											echo	'<li class="yacht-info__list__item">'. 
+													'<span class="yacht-info__list__item-name">' .
+													$specification['label'] . 
+													'</span>' . 
+													'<strong class="yacht-info__list__item-info">' . 
+													$specification['value'] . 
+													'</strong>'  . 
+													'</li>';
+									}
 								}
 							}
-						}
-					?>
-				</ul>
-			</div>
-			<div class="col-12 col-md-6">
-				<ul class="yacht-info__list">
-					<li class="yacht-info__list__item yacht-info--bold">ALOJAMIENTO</li>
-					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name">Camarotes</span>
-						<strong class="yacht-info__list__item-info">
-							<?php echo $accommodation['camarotes']; ?>
-						</strong>
-					</li>
-					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name">Invitados:</span>
-						<strong class="yacht-info__list__item-info">
-							<?php echo $accommodation['invitados']; ?>
-						</strong>
-					</li>
-					<li class="yacht-info__list__item">
-						<span class="yacht-info__list__item-name">Tripulación:</span>
-						<strong class="yacht-info__list__item-info">
-							<?php echo $accommodation['tripulacion']; ?>
-						</strong>
-					</li>
-				</ul>
-			</div>
+						?>
+					</ul>
+
+					<ul class="yacht-info__list" style="margin-top: 50px">
+						<li class="yacht-info__list__item yacht-info--bold">ALOJAMIENTO</li>
+						<li class="yacht-info__list__item">
+							<span class="yacht-info__list__item-name">Camarotes</span>
+							<strong class="yacht-info__list__item-info">
+								<?php echo $accommodation['camarotes']; ?>
+							</strong>
+						</li>
+						<li class="yacht-info__list__item">
+							<span class="yacht-info__list__item-name">Invitados:</span>
+							<strong class="yacht-info__list__item-info">
+								<?php echo $accommodation['invitados']; ?>
+							</strong>
+						</li>
+						<li class="yacht-info__list__item">
+							<span class="yacht-info__list__item-name">Tripulación:</span>
+							<strong class="yacht-info__list__item-info">
+								<?php echo $accommodation['tripulacion']; ?>
+							</strong>
+						</li>
+					</ul>
+
+				</div>
+				<div class="col-12 col-md-6">
+					<?php echo $charter_info['content'] ?>
+				</div>
 			</div>
 		</div>
 		<div class="section section--dark section--justified charter-info" style="text-align: center;">
