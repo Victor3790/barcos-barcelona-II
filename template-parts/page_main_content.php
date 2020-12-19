@@ -93,7 +93,7 @@
     </div>
   </div>
   <div class="section section--justified section--dark">
-    <div class="section__form" style="width:65%;">
+    <div class="section__form">
       <h2>Envianos un mensaje.</h2>
       <?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
     </div>

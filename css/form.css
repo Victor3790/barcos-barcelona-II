@@ -1,10 +1,9 @@
 .section__form {
-    /*width: 65%;*/
     padding-top: 55px;
     padding-bottom: 55px; }
 
 .section__form__label {
-    width: 95%;
+    width: 97%;
     margin: 0; }
   
 .section__form__input {
@@ -26,3 +25,9 @@
 
 .section__form__acceptance-link:hover {
     color: #999;}
+
+@media (min-width: 768px) {
+    .section__form__label {
+        width: 95%;
+    }
+}
