@@ -11,9 +11,14 @@
 
 ?>
 
-	<footer class="section section--justified section--white" style="width:100%;">
-		<div>
-		<p>Copyright 2020 Barcos Barcelona.</p>
+	<footer class="footer section section--justified section--white">
+		<div class="footer__copy">
+			<p style="margin:0;">Copyright 2020 Barcos Barcelona.</p>
+		</div>
+		<div class="footer__link">
+			<a style="color:#7d7c7c;" href="https://alquilerdeyatesenibiza.com" target="bank">
+				Alquiler de yates en ibiza
+			</a>
 		</div>
   	</footer>
 </div><!-- #page -->
