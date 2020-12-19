@@ -47,13 +47,16 @@
 			</div>
 		</nav>
 		<div class="header__logo">
-			<img  class="header_logo__img"
-				src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
-				alt="Barcos Barcelona, Alquiler de barcos." 
-				srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 155w,
-						<?php echo THEME_URI; ?>/imgs/logo_lg.png 280w"
-				sizes=	"(max-width: 992px) 150px,
-						270px">
+			<a href="<?php echo home_url(); ?>">
+				<img  class="header_logo__img"
+					src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
+					alt="Barcos Barcelona, Alquiler de barcos." 
+					srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 155w,
+							<?php echo THEME_URI; ?>/imgs/logo_lg.png 280w"
+					sizes=	"(max-width: 992px) 150px,
+							270px"
+				>
+			</a>
 		</div>
 		<div class="header__search">
 			<!--<img src="<?php //echo THEME_URI; ?>/imgs/lupa.png" alt="" style="width: 20px;">-->

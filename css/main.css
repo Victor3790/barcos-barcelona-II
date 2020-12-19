@@ -2,6 +2,10 @@ body {
   min-width: 360px;
   font-family: Tw Cen MT,Arial,sans-serif!important; }
 
+.skip-link {
+  display: none;
+}
+
 h1, h2, h3, h4, h5 {
   color: #B9874C; }
 

@@ -16,6 +16,7 @@ function cbt_search_query( $query ){
     return;
 
   $meta_query = array();
+  $tax_query = array();
 
   $ship_type    = get_query_var( 'ship_type' ); 
   $min_rate     = get_query_var( 'min_rate' ); 
@@ -26,38 +27,38 @@ function cbt_search_query( $query ){
   $max_cabins   = get_query_var( 'max_cabins' ); 
   $destination  = get_query_var( 'cruising_area' ); 
 
-  if( !empty( $ship_type ) )
-    $meta_query[] = array(  'key'=>'tipo_data', 
-                            'value'=>$ship_type, 
-                            'compare'=>'=', 
-                            'type'=>'CHAR'  
-                          );
+  if( valid_tax_input( $ship_type, 'tipo' ) )
+    $tax_query[] = array(   'taxonomy'=>'tipo',
+                            'field'=>'slug',
+                            'terms'=>$ship_type
+                        );
 
-  if( !empty( $min_rate ) && !empty( $max_rate ) )
+  if( valid_meta_input( $min_rate, 2000, $max_rate, 800000 ) )
     $meta_query[] = array(  'key'=>'precio_data', 
                             'value'=>array($min_rate, $max_rate), 
                             'compare'=>'BETWEEN', 
                             'type'=>'NUMERIC'  
                           );
 
-  if( !empty( $min_length ) && !empty( $max_length ) )
+  if( valid_meta_input( $min_length, 1, $max_length, 99 ) )
     $meta_query[] = array(  'key'=>'eslora_data', 
                             'value'=>array($min_length, $max_length), 
                             'compare'=>'BETWEEN', 
                             'type'=>'NUMERIC'  
                           );
 
-  if( !empty( $min_cabins && !empty( $max_cabins ) ) )
+  if( valid_meta_input( $min_rate, 1, $max_rate, 21 ) )
     $meta_query[] = array(  'key'=>'camarotes_data', 
                             'value'=>array($min_cabins, $max_cabins), 
                             'compare'=>'BETWEEN', 
                             'type'=>'NUMERIC'  
                           );
 
-  if( !empty( $destination ) )
-    $meta_query[] = array(  'key'=>'bb_' . $destination,  
-                            'compare'=>'EXISTS'  
-                          );
+  if( valid_tax_input( $destination, 'destino' ) )
+    $tax_query[] = array(   'taxonomy'=>'destino',
+                            'field'=>'slug',
+                            'terms'=>$destination
+                        );
 
   if( count( $meta_query ) > 1 ){
     $meta_query['relation'] = 'AND';
@@ -66,4 +67,51 @@ function cbt_search_query( $query ){
 
   if( count( $meta_query ) > 0 )
     $query->set('meta_query', $meta_query);
+
+  if( count( $tax_query ) > 1 )
+    $tax_query['relation'] = 'AND';
+
+  if( count( $tax_query ) > 0 )
+    $query->set('tax_query', $tax_query);
+}
+
+
+function valid_tax_input( $query_var, $taxonomy ) 
+{
+  
+  if( empty( $query_var ) )
+    return false;
+
+  $term = term_exists( $query_var, $taxonomy );
+
+  if( $term === 0 || $term === null ) 
+    return false;
+
+  return true;
+
+}
+
+function valid_meta_input( $min_input, $min_limit, $max_input, $max_limit ) 
+{
+  
+  if( empty( $min_input ) || empty( $min_limit ) )
+    return false;
+
+  if( empty( $max_input ) || empty( $max_limit ) )
+    return false;
+
+  if( !is_numeric( $min_input ) || !is_numeric( $min_limit ) )
+    return false;
+
+  if( !is_numeric( $max_input ) || !is_numeric( $max_limit ) )
+    return false;
+
+  if( $min_input < $min_limit || $min_input > $max_limit )
+    return false;
+
+  if( $max_input < $min_limit || $max_input > $max_limit )
+    return false;
+
+  return true;
+
 }

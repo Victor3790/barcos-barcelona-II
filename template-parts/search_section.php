@@ -28,27 +28,31 @@
             <div class="row">
               <div class="col-12 col-lg-4">
                 <p class="search__select-title">TIPO</p>
-                <select class="search__select" name="ship_type" id="">
+                <?php $tipos = get_terms( [ 'taxonomy' => 'tipo', 'hide_empty' => false ] );?>
+                <select class="search__select" name="ship_type">
                   <option value="0">Seleccione un tipo de barco</option>
-                  <option value="1">Motor</option>
-                  <option value="2">Vela</option>
-                  <option value="3">Ambos</option>
+                  <?php if( !empty( $tipos ) ) : ?>
+                    <?php foreach( $tipos as $tipo ) : ?>
+                      <option value="<?php echo $tipo->slug; ?>">
+                        <?php echo $tipo->name; ?>
+                      </option>
+                    <?php endforeach; ?>
+                  <?php endif; ?>
+                  <option value="0">Ambos</option>
                 </select>
               </div>
               <div class="col-12 col-lg-4">
                 <p class="search__select-title">DESTINO</p>
-                <select class="search__select" name="cruising_area" id="">
+                <?php $destinos = get_terms( [ 'taxonomy' => 'destino', 'hide_empty' => false ] );?>
+                <select class="search__select" name="cruising_area">
                   <option value="0">Seleccione destino </option>
-                  <?php
-                    $areas = get_field_object('cruising_areas', 165, true, false);
-                    if( !empty( $areas ) ):
-                  ?>
-                    <?php foreach ( $areas['choices'] as $value => $label ) : ?>
-                      <option value="<?php echo esc_html( $value ); ?>">
-                        <?php echo esc_html( $label ); ?>
-                      </option>
-                    <?php endforeach; ?>
-                  <?php endif; ?>
+                    <?php if( !empty( $destinos ) ) : ?>
+                      <?php foreach( $destinos as $destino ) : ?>
+                        <option value="<?php echo $destino->slug; ?>">
+                          <?php echo $destino->name; ?>
+                        </option>
+                      <?php endforeach; ?>
+                    <?php endif; ?>
                 </select>
               </div>
               <div class="search__button__container col-12 col-lg-4">

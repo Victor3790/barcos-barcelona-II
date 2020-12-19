@@ -10,7 +10,6 @@ function cbt_scripts() {
 	wp_enqueue_script ( THEME_NAME . '_menu',
 						THEME_URI . '/js/menu.js',
 						array('jquery'),
-						false,
 						true );
 
 	wp_enqueue_style( THEME_NAME . '_bootstrap_reboot', 
@@ -66,13 +65,11 @@ function cbt_scripts() {
 		wp_enqueue_script ( THEME_NAME . '_search_slider',
 						  THEME_URI . '/js/search_slider.js',
 						  array('jquery-touch-punch', 'jquery-ui-slider', 'jquery'),
-						  false,
 						  true );
 
 		wp_enqueue_script ( THEME_NAME . '_search',
 						  THEME_URI . '/js/search.js',
 						  array(THEME_NAME . '_search_slider'),
-						  false,
 						  true );
 	}
 

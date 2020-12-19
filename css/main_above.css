@@ -2,6 +2,10 @@ body {
     min-width: 360px;
     font-family: Tw Cen MT,Arial,sans-serif!important; }
 
+.skip-link {
+  display: none;
+}
+
 .hero {
   width: 100%;
   height: 100vh;

@@ -12,7 +12,12 @@
 	$specifications = get_field_objects();
 	$accommodation = get_field('accommodation');
 	$charter_info = get_field('charter_info');
-	$cruising_areas = get_field('cruising_areas');
+	$cruising_areas = get_the_terms( $post->ID, 'destino' );
+	$areas_string = '';
+
+	if( !empty($cruising_areas) )
+		$areas_string = join( ', ', wp_list_pluck( $cruising_areas, 'name' ) );
+	
 	$content = get_field('content');
 	$attachments = get_posts( 
 						array( 
@@ -162,11 +167,7 @@
 						<li class="yacht-info__list__item">
 							<span class="yacht-info__list__item-name">
 								<?php 
-									foreach ($cruising_areas as $key => $element) {
-										echo $element['label'];
-										if( $key !== array_key_last($cruising_areas) )
-											echo ', ';
-									} 
+									echo $areas_string;
 								?>
 							</span>
 						</li>
