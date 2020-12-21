@@ -36,7 +36,7 @@
                    890px">
     </div>
     <div class="section__text section--justified section--right">
-      <h2>TITULO 2</h2>
+      <h2>Privilegio</h2>
       <p>
         Viva una experiencia inolvidable navegando por los destinos más exclusivos 
         del Mediterráneo y Caribe con nuestro servicio de alquiler de yates en Ibiza, 
@@ -115,13 +115,13 @@
       </ul>
     </div>
   </div>
-  <div class="section section--justified section--white">
+  <!--<div class="section section--justified section--white">
     <div class="section__ships">
       <h2>Nuestros barcos.</h2>
       <div class="section__ships__items">
         <div class="section__ships__item">
-          <img src="<?php echo THEME_URI; ?>/imgs/thumbnail.jpg" alt="" style="width: 300px; margin-top: 23px;">
+          <img src="<?php //echo THEME_URI; ?>/imgs/thumbnail.jpg" alt="" style="width: 300px; margin-top: 23px;">
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
