@@ -36,7 +36,7 @@
                    890px">
     </div>
     <div class="section__text section--justified section--right">
-      <h2>Privilegio</h2>
+      <h2>PRIVILEGIO</h2>
       <p>
         Viva una experiencia inolvidable navegando por los destinos más exclusivos 
         del Mediterráneo y Caribe con nuestro servicio de alquiler de yates en Ibiza, 

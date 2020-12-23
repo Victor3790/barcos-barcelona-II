@@ -33,9 +33,6 @@ add_action( 'customize_register', 'cbt_customizer' );
 include (get_theme_file_path('/inc/cbt_header_styles.php'));
 add_action( 'wp_head', 'cbt_header_styles' );
 
-/*include (get_theme_file_path('/inc/cbt_set_cruising_areas.php'));
-add_action( 'acf/save_post', 'cbt_set_cruising_areas' );*/
-
 include (get_theme_file_path('/inc/cbt_yate_post_type.php'));
 add_action( 'init', 'cptui_register_my_cpts_yate' );
 

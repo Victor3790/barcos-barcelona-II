@@ -4,7 +4,7 @@
   */
  function cbt_header_styles() 
  {
-    if( is_singular( 'yate' ) )
+    if( is_singular( 'yate' ) || is_page() )
         get_template_part( 'template-parts/single_yate_styles' );
  }
  

@@ -44,6 +44,7 @@ header {
 
 .hero__title {
   text-transform: uppercase;
+  text-align: center;
   color: #ededed !important;
   font-family: 'EB Garamond', serif;
   font-size: 60px; }

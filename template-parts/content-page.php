@@ -10,16 +10,19 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
 
 	<?php barcos_barcelona_post_thumbnail(); ?>
 
 	<div class="entry-content">
+		<div class="hero hero--single">
+			<div class="hero__title-wrapper">
+				<h1 class="hero__title"><?php the_title(); ?></h1>
+			</div>
+		</div>
+		<div style="padding: 30px 50px;">
+			<?php the_content(); ?>
+		</div>
 		<?php
-		the_content();
-
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'barcos_barcelona' ),
