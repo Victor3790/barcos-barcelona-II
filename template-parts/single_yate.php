@@ -139,7 +139,7 @@
 					</ul>
 
 				</div>
-				<div class="col-12 col-md-6">
+				<div class="col-12 col-md-6" style="margin-top: 25px;">
 					<?php echo $charter_info['content'] ?>
 				</div>
 			</div>
