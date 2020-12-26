@@ -43,6 +43,10 @@
   color: #B9874C;
 }
 
+.menu-item a:hover {
+  color: #B9874C;
+}
+
 .header__menu__line {
   width: 22px;
   height: 2px;
