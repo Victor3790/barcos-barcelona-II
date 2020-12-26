@@ -73,6 +73,19 @@ function cbt_scripts() {
 						  true );
 	}
 
+	if ( is_home() || is_search() ){
+
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
+		wp_enqueue_style( THEME_NAME . '_posts', 
+						  THEME_URI . '/css/posts.css' );
+
+		wp_enqueue_style( THEME_NAME . '_post-archive', 
+						  THEME_URI . '/css/post-archive.css' );
+						  
+	}
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

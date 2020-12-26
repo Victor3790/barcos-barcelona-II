@@ -12,12 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
-		<div class="hero hero--single">
-			<div class="hero__title-wrapper">
-				<h1 class="hero__title"><?php the_title(); ?></h1>
-			</div>
-		</div>
+		<div class="hero hero--single"></div>
 		<div style="padding: 30px 50px;">
+            <?php the_title('<h1>', '</h1>'); ?>
 			<?php the_content(); ?>
 		</div>
 		<?php

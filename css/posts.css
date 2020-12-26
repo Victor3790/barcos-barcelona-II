@@ -1,0 +1,92 @@
+label{
+    width: 100%;
+  }
+  
+  .widget-container{
+    border-top: 1px solid #cecece;
+    padding-top: 30px;
+  }
+  
+  .widget-title{
+    display: block;
+    font-size: 25px;
+    text-align: left;
+  }
+  
+  .search-field{
+    width: 200px;
+    height: 30px;
+    display: block;
+    background-color: #fff;
+    border: 1px solid #cecece;
+    border-radius: 0px;
+    color: #404040;
+    font-size: 14px;
+    margin: 0 auto;
+  }
+  
+  .search-submit{
+    width: 80px;
+    height: 30px;
+    background-color: #919b9b;
+    color: #fff;
+    border-radius: 6px;
+    display: block;
+    position: static;
+    border: 0;
+    margin: 0 auto;
+  }
+
+  .widget_recent_entries{
+    margin-top: 55px;
+  }
+  
+  .widget_recent_entries ul{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .widget_recent_entries li{
+    list-style: none;
+    margin: 12px 0;
+  }
+  
+  .widget_recent_entries ul li a{
+    font-weight: normal;
+  }
+  
+  .image{
+    margin: 0 auto;
+  }
+  
+  .cbt_post_thumbnail{
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #cecece;
+  }
+  
+  .bbSidebar_social-icon{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 768px) {
+    .widget-container{
+      padding-top: 0;
+      border-top: 0;
+      border-left: 1px solid #cecece;
+    }
+  
+    .search-field{
+      width: 100%;
+    }
+  
+    .search-submit{
+      float: right;
+    }
+  
+    .cbt_post_thumbnail{
+      border-bottom: 0;
+    }
+  }
