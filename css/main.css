@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Tw Cen MT Custom';
+  src: url('../fonts/TCM.TTF');
+}
+
 body {
   min-width: 360px;
-  font-family: Tw Cen MT,Arial,sans-serif!important; }
+  font-family: Tw Cen MT Custom,Arial,sans-serif!important; }
 
 .skip-link {
   display: none;

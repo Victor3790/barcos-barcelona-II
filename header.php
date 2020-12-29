@@ -51,10 +51,10 @@
 				<img  class="header_logo__img"
 					src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
 					alt="Barcos Barcelona, Alquiler de barcos." 
-					srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 155w,
-							<?php echo THEME_URI; ?>/imgs/logo_lg.png 280w"
-					sizes=	"(max-width: 992px) 150px,
-							270px"
+					srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 190w,
+							<?php echo THEME_URI; ?>/imgs/logo_lg.png 380w"
+					sizes=	"(max-width: 992px) 190px,
+							280px"
 				>
 			</a>
 		</div>

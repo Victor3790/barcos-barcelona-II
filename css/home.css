@@ -18,6 +18,7 @@
   width: 100%;
   padding-top: 55px;
   padding-bottom: 55px;
+  line-height: 23px;
   text-align: center; }
 
 .section__contact {
@@ -27,7 +28,12 @@
 
 .section__contact__info-group {
   list-style-type: none;
+  padding: 0;
   margin-top: 33px; }
+
+.section__contact__info-group li a {
+  color: #969696!important;
+}
 
 .section__ships {
   width: 100%;

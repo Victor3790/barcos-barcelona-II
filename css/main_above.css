@@ -1,6 +1,11 @@
+@font-face {
+  font-family: 'Tw Cen MT Custom';
+  src: url('../fonts/TCM.TTF');
+}
+
 body {
     min-width: 360px;
-    font-family: Tw Cen MT,Arial,sans-serif!important; }
+    font-family: Tw Cen MT Custom,Arial,sans-serif!important; }
 
 .skip-link {
   display: none;
@@ -14,12 +19,12 @@ body {
   margin-top: 70px; }
 
 .hero--home {
-  background-image: url('../imgs/hero_xs.jpg');
+  background-image: url('../imgs/hero-main_xs.jpg');
 }
 
 @media (min-width: 768px) {
   .hero--home {
-    background-image: url('../imgs/hero.jpg');
+    background-image: url('../imgs/hero-main.jpg');
   }
 }
 
