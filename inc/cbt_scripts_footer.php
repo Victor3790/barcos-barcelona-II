@@ -19,6 +19,12 @@ function cbt_scripts_footer() {
 		wp_enqueue_style( THEME_NAME . '_main_below', 
 						  THEME_URI . '/css/main_below.css' );
 
+		wp_enqueue_style( THEME_NAME . '_post_archive', 
+						  THEME_URI . '/css/post-archive.css' );
+
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
 	}
 	
 }

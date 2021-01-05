@@ -72,9 +72,28 @@
   .section--right {
     float: right; } }
 
+@media (min-width: 992px) {
+  .section__text p {
+    padding: 0 10px;
+  }
+  .section__text h2 {
+    padding: 15px 10px;
+  }
+}
+
 @media (min-width: 1200px) {
   .section__picture {
     width: 890px; }
   .section__text {
-    width: calc(100% - 890px); } }
+    width: calc(100% - 890px); } 
+}
+
+@media (min-width: 1350px) {
+    .section__text p {
+    padding: 0 80px;
+  }
+  .section__text h2 {
+    padding: 40px 80px;
+  }
+}
 

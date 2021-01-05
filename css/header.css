@@ -36,9 +36,9 @@
   margin: 25px 0 0 0;
   padding: 0; }
 
-/*.header__menu__item {*/
 .menu-item{
   padding: 13px 0;
+  text-transform: uppercase;
   border-bottom: #434343 solid 1px; }
 
 .menu-item a {

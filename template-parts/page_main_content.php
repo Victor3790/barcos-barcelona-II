@@ -94,11 +94,11 @@
   </div>
   <div class="section section--justified section--dark">
     <div class="section__form">
-      <h2>Envíenos su mensaje.</h2>
+      <h2 style="text-transform:uppercase;">Envíenos su mensaje</h2>
       <?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
     </div>
     <div class="section__contact">
-      <h2>Contacto.</h2>
+      <h2 style="text-transform:uppercase;">Contacto</h2>
       <ul class="section__contact__info-group">
         <li>Teléfono:</li>
         <li>(0034) 620 26 90 20</li>
@@ -115,13 +115,36 @@
       </ul>
     </div>
   </div>
-  <!--<div class="section section--justified section--white">
+  <div class="section section--justified section--white">
     <div class="section__ships">
-      <h2>Nuestros barcos.</h2>
-      <div class="section__ships__items">
-        <div class="section__ships__item">
-          <img src="<?php //echo THEME_URI; ?>/imgs/thumbnail.jpg" alt="" style="width: 300px; margin-top: 23px;">
+      <h2>Últimas noticias náuticas de Ibiza.</h2>
+      <div class="container-fluid">
+        <div class="row">
+          <?php
+
+          $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>3));
+
+          if ( $posts->have_posts() ) :
+            
+            while ( $posts->have_posts() ) :
+
+              $posts->the_post();
+
+              get_template_part( 'template-parts/cbt_result_posts' );
+
+            endwhile;
+
+
+          else :
+
+            get_template_part( 'template-parts/content', 'none' );
+
+          endif;
+
+          wp_reset_postdata();
+
+          ?>
         </div>
       </div>
     </div>
-  </div>-->
+  </div>

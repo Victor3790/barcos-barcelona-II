@@ -1,6 +1,6 @@
 .hero--archive
 {
-  background-image: url('../imgs/hero_xs.jpg'); }
+  background-image: url('../imgs/hero-archive_xs.jpg'); }
 
 .cards {
   padding-top: 55px; }
@@ -38,7 +38,8 @@
 @media (min-width: 768px) {
   .hero--archive
   {
-      background-image: url('../imgs/hero.jpg'); }
+    background-position: top!important;
+    background-image: url('../imgs/hero-archive.jpg'); }
   .card {
     margin-bottom: 35px; } }
 
