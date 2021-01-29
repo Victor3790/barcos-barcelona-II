@@ -117,12 +117,16 @@
   </div>
   <div class="section section--justified section--white">
     <div class="section__ships">
-      <h2>Últimas noticias náuticas de Ibiza.</h2>
       <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <h2>NOVEDADES</h2>
+          </div>
+        </div>
         <div class="row">
           <?php
 
-          $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>3));
+          $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>4));
 
           if ( $posts->have_posts() ) :
             
@@ -130,7 +134,7 @@
 
               $posts->the_post();
 
-              get_template_part( 'template-parts/cbt_result_posts' );
+              get_template_part( 'template-parts/cbt_result_posts_main' );
 
             endwhile;
 
