@@ -1,5 +1,5 @@
 <?php global $wp_query; ?>
-<div class="col-12 col-md-6 col-lg-3">
+<div>
   <div class="cbt_post_thumbnail">
 		<div class="cbt_post_thumbnail_pic">
 			<?php the_post_thumbnail('cbt_xs_thumbnail'); ?>

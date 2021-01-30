@@ -40,6 +40,25 @@
   padding-top: 55px;
   padding-bottom: 55px; }
 
+.section__ships__title {
+  padding: 10px;
+}
+
+.section__ships__arrows {
+  position: absolute;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  right: 80px;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+  font-size: 45px!important;
+  color: black!important;
+}
+
 @media (min-width: 576px) {
   .section__picture__img {
     width: 800px;

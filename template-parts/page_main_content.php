@@ -117,13 +117,11 @@
   </div>
   <div class="section section--justified section--white">
     <div class="section__ships">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col">
-            <h2>NOVEDADES</h2>
-          </div>
+      <div>
+        <div class="section__ships__title">
+          <h2>NOVEDADES</h2>
         </div>
-        <div class="row">
+        <div id="bb_news">
           <?php
 
           $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>4));
@@ -149,6 +147,7 @@
 
           ?>
         </div>
+        <div id="bb_arrows" class="section__ships__arrows"></div>
       </div>
     </div>
   </div>

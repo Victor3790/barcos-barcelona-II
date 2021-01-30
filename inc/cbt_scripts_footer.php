@@ -22,8 +22,11 @@ function cbt_scripts_footer() {
 		wp_enqueue_style( THEME_NAME . '_post_archive', 
 						  THEME_URI . '/css/post-archive.css' );
 
-		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
-						  THEME_URI . '/css/bootstrap_grid.css' );
+		wp_enqueue_style( THEME_NAME . '_slick', 
+						  THEME_URI . '/css/slick.css' );
+
+		wp_enqueue_style( THEME_NAME . '_slick-theme', 
+						  THEME_URI . '/css/slick-theme.css' );
 
 	}
 	

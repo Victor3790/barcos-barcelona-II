@@ -33,6 +33,16 @@ function cbt_scripts() {
 		wp_enqueue_style( THEME_NAME . '_main_above', 
 						  THEME_URI . '/css/main_above.css' );
 
+		wp_enqueue_script ( THEME_NAME . '_slick',
+						  THEME_URI . '/js/slick.js',
+						  array('jquery'),
+						  true );
+
+		wp_enqueue_script ( THEME_NAME . '_slick_slider',
+						  THEME_URI . '/js/slick_slider.js',
+						  array(THEME_NAME . '_slick'),
+						  true );
+
 	}
 
 	if ( is_singular('yate') ){

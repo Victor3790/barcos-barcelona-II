@@ -47,6 +47,10 @@ a{
     margin-top: 10px;
   }
 
+  .cbt_post_thumbnail {
+    padding: 0 10px;
+  }
+
   .cbt_post_thumbnail_pic {
     display: flex;
     align-items: center;
