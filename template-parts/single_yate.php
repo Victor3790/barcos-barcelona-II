@@ -18,7 +18,6 @@
 	if( !empty($cruising_areas) )
 		$areas_string = join( ', ', wp_list_pluck( $cruising_areas, 'name' ) );
 	
-	$content = get_field('content');
 	$attachments = get_posts( 
 						array( 
 							'post_type' => 'attachment', 
@@ -89,99 +88,103 @@
 				}
 			?>
 		</div>
-		<div class="section section--white section--justified yacht-info">
-			<h2 class="yacht-info__title" style="text-transform:uppercase;"><?php the_title(); ?></h2>
-			<div class="row">
-				<div class="col-12 col-md-6">
-					<ul class="yacht-info__list">
-						<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
-						<?php 
-							if( $specifications ){
-								foreach ( $specifications as $specification ) {
-									if( $specification['value'] && 
-										!is_array( $specification['value'] ) && 
-										!is_numeric( $specification['value'] ) ) {
-											
-											echo	'<li class="yacht-info__list__item">'. 
-													'<span class="yacht-info__list__item-name">' .
-													$specification['label'] . 
-													'</span>' . 
-													'<strong class="yacht-info__list__item-info">' . 
-													$specification['value'] . 
-													'</strong>'  . 
-													'</li>';
+		<div class="yacht-info-container">
+			<div class="section section--white section--justified yacht-info">
+				<h2 class="yacht-info__title" style="text-transform:uppercase;"><?php the_title(); ?></h2>
+				<div class="row">
+					<div class="col-12 col-md-6">
+						<ul class="yacht-info__list">
+							<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
+							<?php 
+								if( $specifications ){
+									foreach ( $specifications as $specification ) {
+										if( $specification['value'] && 
+											!is_array( $specification['value'] ) && 
+											!is_numeric( $specification['value'] ) ) {
+												
+												echo	'<li class="yacht-info__list__item">'. 
+														'<span class="yacht-info__list__item-name">' .
+														$specification['label'] . 
+														'</span>' . 
+														'<strong class="yacht-info__list__item-info">' . 
+														$specification['value'] . 
+														'</strong>'  . 
+														'</li>';
+										}
 									}
 								}
-							}
-						?>
-					</ul>
+							?>
+						</ul>
 
-					<ul class="yacht-info__list" style="margin-top: 50px">
-						<li class="yacht-info__list__item yacht-info--bold">ALOJAMIENTO</li>
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name">Camarotes</span>
-							<strong class="yacht-info__list__item-info">
-								<?php echo $accommodation['camarotes']; ?>
-							</strong>
-						</li>
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name">Invitados:</span>
-							<strong class="yacht-info__list__item-info">
-								<?php echo $accommodation['invitados']; ?>
-							</strong>
-						</li>
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name">Tripulación:</span>
-							<strong class="yacht-info__list__item-info">
-								<?php echo $accommodation['tripulacion']; ?>
-							</strong>
-						</li>
-					</ul>
+						<ul class="yacht-info__list" style="margin-top: 50px">
+							<li class="yacht-info__list__item yacht-info--bold">ALOJAMIENTO</li>
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name">Camarotes</span>
+								<strong class="yacht-info__list__item-info">
+									<?php echo $accommodation['camarotes']; ?>
+								</strong>
+							</li>
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name">Invitados:</span>
+								<strong class="yacht-info__list__item-info">
+									<?php echo $accommodation['invitados']; ?>
+								</strong>
+							</li>
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name">Tripulación:</span>
+								<strong class="yacht-info__list__item-info">
+									<?php echo $accommodation['tripulacion']; ?>
+								</strong>
+							</li>
+						</ul>
 
-				</div>
-				<div class="col-12 col-md-6" style="margin-top: 25px;">
-					<?php echo $charter_info['content'] ?>
+					</div>
+					<div class="col-12 col-md-6" style="margin-top: 25px;">
+						<?php the_content(); ?>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="section section--dark section--justified charter-info" style="text-align: center;">
-			<h2 class="yacht-info__title">INFORMACIÓN DE ALQUILER</h2>
-			<div class="row">
-				<div class="col-12">
-					<ul class="yacht-info__list">
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name yacht-info--bold">
-								PRECIO
-							</span>
-						</li>
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name"><?php echo $charter_info['price'] ?></span>
-						</li>
-					</ul>
-					<ul class="yacht-info__list" style="margin-top: 38px;">
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name yacht-info--bold">
-								AREAS DE NAVEGACIÓN
-							</span>
-						</li>
-						<li class="yacht-info__list__item">
-							<span class="yacht-info__list__item-name">
-								<?php 
-									echo $areas_string;
-								?>
-							</span>
-						</li>
-					</ul>
+		<div class="yacht-contact-container">
+			<div class="section section--dark section--justified charter-info" style="text-align: center;">
+				<h2 class="yacht-info__title">INFORMACIÓN DE ALQUILER</h2>
+				<div class="row">
+					<div class="col-12">
+						<ul class="yacht-info__list">
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name yacht-info--bold">
+									PRECIO
+								</span>
+							</li>
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name"><?php echo $charter_info['price'] ?></span>
+							</li>
+						</ul>
+						<ul class="yacht-info__list" style="margin-top: 38px;">
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name yacht-info--bold">
+									AREAS DE NAVEGACIÓN
+								</span>
+							</li>
+							<li class="yacht-info__list__item">
+								<span class="yacht-info__list__item-name">
+									<?php 
+										echo $areas_string;
+									?>
+								</span>
+							</li>
+						</ul>
+					</div>
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-12">
-					<div style="margin: 25px 0 15px 0;">
-						<span class="yacht-info__list__item-name yacht-info--bold">
-							CONTÁCTENOS
-						</span>
-					</div>	
-					<?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
+				<div class="row">
+					<div class="col-12">
+						<div style="margin: 25px 0 15px 0;">
+							<span class="yacht-info__list__item-name yacht-info--bold">
+								CONTÁCTENOS
+							</span>
+						</div>	
+						<?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
+					</div>
 				</div>
 			</div>
 		</div>

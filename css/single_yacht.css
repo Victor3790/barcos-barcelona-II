@@ -1,3 +1,13 @@
+.yacht-info-container {
+  overflow: hidden;
+  background-color: #000;
+}
+
+.yacht-contact-container {
+  overflow: hidden;
+  background-color:#ededed;
+}
+
 .section__picture {
   width: 100%;
   overflow: hidden; }

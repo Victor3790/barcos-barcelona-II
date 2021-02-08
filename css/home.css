@@ -52,13 +52,6 @@
   right: 80px;
 }
 
-.slick-prev:before,
-.slick-next:before
-{
-  font-size: 45px!important;
-  color: black!important;
-}
-
 @media (min-width: 576px) {
   .section__picture__img {
     width: 800px;

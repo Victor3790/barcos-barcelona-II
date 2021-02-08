@@ -20,7 +20,7 @@ get_header();
 		</div>
 	</div>
 
-	<div id="primary" class="content-area content" style="margin-top: 30px;">
+	<div id="primary" class="content-area content">
 		<main id="main" class="site-main container">
 			<div class="row">
 				<div class="col-12">

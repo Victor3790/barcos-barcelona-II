@@ -1,4 +1,4 @@
-img {
+.wp-post-image {
     display: block;
     width: 100%;
     height: auto;
@@ -12,6 +12,11 @@ a{
     color: #000;
   }
 
+  .content-area {
+    background-color: #ededed;
+    padding-top: 30px;
+  }
+
   .hero--yacht-archive {
     background-image: url('../imgs/hero_xs.jpg');
   }
@@ -20,6 +25,7 @@ a{
     text-align: left;
     font-size: 20px;
     margin: 5px 0!important;
+    color: #7d7c7c;
   }
   
   .read-more{

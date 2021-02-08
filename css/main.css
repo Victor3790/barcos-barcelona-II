@@ -27,6 +27,10 @@ a {
 header {
   overflow: hidden; }
 
+.entry-content {
+  background-color: #ededed;
+}
+
 .hero {
   width: 100%;
   height: 100vh;
