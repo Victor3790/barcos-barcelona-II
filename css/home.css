@@ -52,6 +52,33 @@
   right: 80px;
 }
 
+.ships__arrow {
+  width: 15px;
+  height: 15px;
+  border-right: 3px solid #7d7c7c;
+  border-top: 3px solid #7d7c7c;
+  display: block;
+  cursor: pointer; }
+
+.ships__arrow:hover {
+  border-color: black;
+}
+
+.ships__arrow--left {
+  -webkit-transform: rotate(228deg);
+  transform: rotate(228deg); 
+}
+
+.ships__arrow--right {
+  -webkit-transform: rotate(47deg);
+  transform: rotate(47deg); 
+}
+
+.ships__arrow-container {
+  padding: 0 8px;
+  float: left;
+}
+
 @media (min-width: 576px) {
   .section__picture__img {
     width: 800px;

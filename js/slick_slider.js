@@ -3,8 +3,8 @@ jQuery(document).ready(function($){
     $('#bb_news').slick({
         infinite: true,
         appendArrows: '#bb_arrows',
-        prevArrow: '<i class="fas fa-angle-left slick-arrow" style="font-size: 43px; padding: 0 20px;"></i>',
-        nextArrow: '<i class="fas fa-angle-right slick-arrow" style="font-size: 43px;"></i>',
+        prevArrow: '<div class="ships__arrow-container"><div class="ships__arrow ships__arrow--left"></div></div>',
+        nextArrow: '<div class="ships__arrow-container"><div class="ships__arrow ships__arrow--right"></div></div>',
         slidesToShow: 3,
         slidesToScroll: 3,
         responsive: [

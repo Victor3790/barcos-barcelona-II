@@ -24,10 +24,6 @@ function cbt_scripts_footer() {
 
 		wp_enqueue_style( THEME_NAME . '_slick', 
 						  THEME_URI . '/css/slick.css' );
-
-		wp_enqueue_style( THEME_NAME . '_all_awesome', 
-						  THEME_URI . '/css/all.min.css' );
-
 	}
 	
 }
