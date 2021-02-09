@@ -2,6 +2,17 @@
 {
   background-image: url('../imgs/hero-archive_xs.jpg'); }
 
+.hero__arrow {
+  position: absolute;
+  bottom: 15px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  width: 35px;
+  height: 35px;
+  -webkit-transform: rotate( 317deg );
+        transform: rotate( 317deg );
+}
+
 .cards {
   padding-top: 55px; }
 

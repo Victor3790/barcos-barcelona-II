@@ -1,6 +1,7 @@
 <div class="hero hero--archive">
       <div class="hero__title-wrapper">
         <h1 class="hero__title"> <span class="hero__title__upper">BUSCADOR DE </span>BARCOS</h1>
+        <span class="hero__arrow"></span>
       </div>
 </div>
 <div class="search section section--dark section--justified">
