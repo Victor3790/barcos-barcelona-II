@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
-    let menu            = $('.header__menu');
+    let menu            = $('#menu');
+    let search          = $('#search');
     let window_width    = $( window ).width();
     let menu_width      = 0;
 
@@ -17,35 +18,70 @@ jQuery(document).ready(function($){
     }
     else
     {
-        menu_width = '45%';
+        menu_width = '40%';
     }
 
-    $('.header__menu-icon').click(function(){
-        if(menu.css('width')==='0px')
+    $( '#menu_icon' ).click( function(e){
+        open( menu, search );
+        e.stopPropagation();
+    });
+
+    $('#menu_close').click( function(e){
+        close( menu );
+        e.stopPropagation();
+    });
+
+    $('#search_icon').click(function(e) {
+        open( search, menu );
+        e.stopPropagation();
+    })
+
+    $('#search_close').click(function(e){
+        close( search );
+        e.stopPropagation();
+    });
+
+    $('body').click(function(e){
+        console.log(menu.has(e.target));
+        if( !menu.is( e.target ) && menu.has(e.target).length === 0 )
+            close(menu);
+
+        if( !search.is( e.target ) && search.has(e.target).length === 0 )
+            close(search);
+
+    });
+
+    function open( window, to_close )
+    {
+        if(to_close.css('width')!=='0px')
+            close(to_close);
+
+        if(window.css('width')==='0px')
         {
-            menu.animate(
+            window.animate(
                 {
                     width: menu_width
                 }, 
                 {
                     duration: 190,
-                    start: function(){menu.css('display','block')}
+                    start: function(){window.css('display','block')}
                 }
             );
         }
-    });
+    }
 
-    $('.header__menu__close').click(function(){
-        if(menu.css('width')!=='0px')
+    function close( window )
+    {
+        if(window.css('width')!=='0px')
         {
-            menu.animate({
+            window.animate({
                     width: '0'
                 }, 
                 {
                     duration: 190,
-                    complete: function(){menu.css('display','none')}
+                    complete: function(){window.css('display','none')}
                 }
             );
         }
-    });
+    }
 });

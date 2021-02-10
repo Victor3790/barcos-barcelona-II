@@ -27,39 +27,47 @@
 	
 	<header>
 		<div class="header">
-		<nav>
-			<div class="header__menu-icon">
-			<div class="header__menu__line"></div>
-			<div class="header__menu__line"></div>
-			<div class="header__menu__line"></div>
-			</div>
-			<div class="header__menu">
-				<div class="header__menu__close">
-					<div class="close"></div>
+			<nav>
+				<div id="menu_icon" class="header__menu-icon">
+					<div class="header__menu__line"></div>
+					<div class="header__menu__line"></div>
+					<div class="header__menu__line"></div>
 				</div>
-					<?php
-						wp_nav_menu( array(
-							'theme_location' => 'menu-1',
-							'menu_id'        => 'primary-menu',
-							'menu_class'	   => 'header__menu__list',
-						) );
-					?>
+				<div id="menu" class="header__menu">
+					<div id="menu_close" class="header__menu__close">
+						<div class="close"></div>
+					</div>
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+								'menu_class'	   => 'header__menu__list',
+							) );
+						?>
+				</div>
+			</nav>
+			<div class="header__logo">
+				<a href="<?php echo home_url(); ?>">
+					<img  class="header_logo__img"
+						src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
+						alt="Barcos Barcelona, Alquiler de barcos." 
+						srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 190w,
+								<?php echo THEME_URI; ?>/imgs/logo_lg.png 350w"
+						sizes=	"(max-width: 992px) 190px,
+								350px"
+					>
+				</a>
 			</div>
-		</nav>
-		<div class="header__logo">
-			<a href="<?php echo home_url(); ?>">
-				<img  class="header_logo__img"
-					src="<?php echo THEME_URI; ?>/imgs/logo_lg.png" 
-					alt="Barcos Barcelona, Alquiler de barcos." 
-					srcset="<?php echo THEME_URI; ?>/imgs/logo_sm.png 190w,
-							<?php echo THEME_URI; ?>/imgs/logo_lg.png 350w"
-					sizes=	"(max-width: 992px) 190px,
-							350px"
-				>
-			</a>
-		</div>
-		<div class="header__search">
-			<!--<img src="<?php //echo THEME_URI; ?>/imgs/lupa.png" alt="" style="width: 20px;">-->
-		</div>
+			<div class="header__search">
+				<div id="search_icon" >
+					<img src="<?php echo THEME_URI; ?>/imgs/lupa.png">
+				</div>
+			</div>
+			<div id="search" class="header__search-section">
+					<div id="search_close" class="header__search__close">
+						<div class="close"></div>
+					</div>
+					<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+				</div>
 		</div>
   	</header>
