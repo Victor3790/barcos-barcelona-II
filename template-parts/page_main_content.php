@@ -92,7 +92,7 @@
       </p>
     </div>
   </div>
-  <div class="section section--justified section--dark">
+  <div id="contact" class="section section--justified section--dark">
     <div class="section__form">
       <h2 style="text-transform:uppercase;">Envíenos su mensaje</h2>
       <?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>

@@ -16,7 +16,7 @@
 			<p style="margin:0;">Copyright <?php echo date('Y'); ?> BARCOS BARCELONA S.L.</p>
 		</div>
 		<div class="footer__link">
-			<a style="color:#7d7c7c;" href="https://alquilerdeyatesenibiza.com" target="bank">
+			<a style="color:#969696;" href="https://alquilerdeyatesenibiza.com" target="bank">
 				Alquiler de yates en ibiza
 			</a>
 		</div>

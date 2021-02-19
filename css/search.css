@@ -7,11 +7,12 @@
   padding: 20px 0; }
 
 .search__arrow {
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   border-right: 2px solid #B9874C;
   border-top: 2px solid #B9874C;
   position: absolute;
+  bottom: 28px;
   display: block;
   cursor: pointer; }
 
@@ -91,6 +92,12 @@
 
 #length_slider{
   margin: 50px 0;}
+
+@media (min-width: 767px) {
+  .search__arrow {
+    bottom: 35px;
+  }
+}
 
 @media (min-width: 992px) {
   .slider__title {

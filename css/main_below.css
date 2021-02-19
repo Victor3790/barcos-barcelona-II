@@ -76,6 +76,7 @@
 
   .footer {
     background-color: #f9f9f9!important;
+    color: #969696!important;
     display: flex;
     flex-direction: column;
     padding-top: 20px;

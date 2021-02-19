@@ -55,6 +55,11 @@ function cbt_scripts() {
 
 		wp_enqueue_style( THEME_NAME . '_form', 
 						  THEME_URI . '/css/form.css' );
+
+		wp_enqueue_script ( THEME_NAME . '_yacht_container',
+						  THEME_URI . '/js/yacht_container.js',
+						  array('jquery'),
+						  true );
 	}
 
 	if(is_post_type_archive('yate')){

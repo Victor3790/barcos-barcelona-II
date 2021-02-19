@@ -1,11 +1,9 @@
 .yacht-info-container {
-  overflow: hidden;
-  background-color: #000;
+  background-color: #ededed;
 }
 
 .yacht-contact-container {
-  overflow: hidden;
-  background-color:#ededed;
+  background-color: #000;
 }
 
 .section__picture {
@@ -63,29 +61,30 @@
     width: 740px; }}
 
 @media (min-width: 768px) {
-  .yacht-info {
-    width: 60%;
-    float: left; }
-  .charter-info {
-    width: 40%;
-    float: left; } 
   .section__picture__img {
     margin: 0;
     width: 1040px; }}
 
 @media (min-width: 992px) {
-  .yacht-info {
-    width: 65%; }
-  .charter-info {
-    width: 35%; } 
+  .yacht-info-container {
+    width: 65%;
+    float: left; }
+  .yacht-contact-container {
+    width: 35%; 
+    float: left;} 
   .section__picture__img {
     margin: 0;
-    width: 1340px; }}
+    width: 1340px; }
+  .yacht-container {
+    height: auto;
+    overflow: hidden;
+  }
+}
 
 @media (min-width: 1200px) {
-  .yacht-info {
+  .yacht-info-container {
     width: 68%; }
-  .charter-info {
+  .yacht-contact-container {
     width: 32%; }
   .section__picture__img {
     margin: 0;
