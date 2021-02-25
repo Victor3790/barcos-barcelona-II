@@ -20,7 +20,11 @@
 
 .section__picture__img {
   margin: 0;
-  width: 540px; }
+  height: 800px;
+  width: 540px;
+  background-size: cover;
+  background-position: center;
+}
 
 .yacht-info {
   padding-top: 55px;

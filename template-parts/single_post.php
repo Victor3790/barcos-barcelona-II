@@ -14,8 +14,18 @@
 	<div class="entry-content">
 		<div class="hero hero--single"></div>
 		<div style="padding: 30px 50px;">
-            <?php the_title('<h1>', '</h1>'); ?>
-			<?php the_content(); ?>
+			<div class="row">
+				<div class="col-12">
+					<?php the_title('<h1>', '</h1>'); ?>
+					<div class="title-line title-line--center tittle-line--black" style="margin-bottom: 25px;"></div>
+				</div>
+				<div class="col-12 col-md-8">
+					<?php the_content(); ?>
+				</div>
+				<div class="col-12 col-md-4 widget-container">
+					<?php get_sidebar(); ?>
+				</div>
+			</div>
 		</div>
 		<?php
 		wp_link_pages(

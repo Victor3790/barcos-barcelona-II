@@ -62,6 +62,15 @@ function cbt_scripts() {
 						  true );
 	}
 
+	if ( is_singular() ){
+
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
+		wp_enqueue_style( THEME_NAME . '_posts_1', 
+						  THEME_URI . '/css/posts.css' );
+	}
+
 	if(is_post_type_archive('yate')){
 
 		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 

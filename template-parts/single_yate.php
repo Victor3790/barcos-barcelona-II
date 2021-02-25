@@ -54,35 +54,13 @@
 			<?php 
 				if( isset($chunk_1) ){
 					foreach ( $chunk_1 as $item ) {
-						$image_xs = wp_get_attachment_image_src( $item->ID, 'cbt_xs', false );
-						$image_sm = wp_get_attachment_image_src( $item->ID, 'cbt_sm', false );
-						$image_md = wp_get_attachment_image_src( $item->ID, 'cbt_md', false );
 						$image_lg = wp_get_attachment_image_src( $item->ID, 'cbt_lg', false );
-						$image_xl = wp_get_attachment_image_src( $item->ID, 'cbt_xl', false );
-	
-						$srcset = $image_xs[0] . ' 600w, ' . 
-								  $image_sm[0] . ' 800w, ' . 
-								  $image_md[0] . ' 1000w, ' . 
-								  $image_lg[0] . ' 1300w, ' . 
-								  $image_xl[0] . ' 1600w';
-								  
-						$sizes = ' (max-width: 576px) 600px, ' . 
-								 ' (max-width: 768px) 800px, ' . 
-								 ' (max-width: 992px) 1000px, ' . 
-								 ' (max-width: 1200px) 1300px, ' . 
-								 ' 1600px';
-	
-						$src = $image_xl[0];
-	
-						$alt = the_title(null, null, false);
 	
 						echo 	'<div class="section__picture section__picture--center">' .
-								'<img class="section__picture__img"' .
-								'srcset = "' . $srcset . 
-								'" sizes = "' . $sizes . 
-								'" src = "' . $src . 
-								'" alt = "' . $alt . 
+								'<div class="section__picture__img" ' . 
+								'style="background-image: url(' . $image_lg[0] . ')' .
 								'">' . 
+								'</div>' .
 								'</div>';
 					}
 				}
@@ -194,35 +172,13 @@
 			<?php 
 				if( isset($chunk_2) ){
 					foreach ( $chunk_2 as $item ) {
-						$image_xs = wp_get_attachment_image_src( $item->ID, 'cbt_xs', false );
-						$image_sm = wp_get_attachment_image_src( $item->ID, 'cbt_sm', false );
-						$image_md = wp_get_attachment_image_src( $item->ID, 'cbt_md', false );
 						$image_lg = wp_get_attachment_image_src( $item->ID, 'cbt_lg', false );
-						$image_xl = wp_get_attachment_image_src( $item->ID, 'cbt_xl', false );
-	
-						$srcset = $image_xs[0] . ' 600w, ' . 
-								  $image_sm[0] . ' 800w, ' . 
-								  $image_md[0] . ' 1000w, ' . 
-								  $image_lg[0] . ' 1300w, ' . 
-								  $image_xl[0] . ' 1600w';
-								  
-						$sizes = ' (max-width: 576px) 600px, ' . 
-								 ' (max-width: 768px) 800px, ' . 
-								 ' (max-width: 992px) 1000px, ' . 
-								 ' (max-width: 1200px) 1300px, ' . 
-								 ' 1600px';
-	
-						$src = $image_xl[0];
-	
-						$alt = the_title(null, null, false);
 	
 						echo 	'<div class="section__picture section__picture--center">' .
-								'<img class="section__picture__img"' .
-								'srcset = "' . $srcset . 
-								'" sizes = "' . $sizes . 
-								'" src = "' . $src . 
-								'" alt = "' . $alt . 
+								'<div class="section__picture__img" ' . 
+								'style="background-image: url(' . $image_lg[0] . ')' .
 								'">' . 
+								'</div>' .
 								'</div>';
 					}
 				}

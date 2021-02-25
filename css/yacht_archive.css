@@ -1,10 +1,12 @@
 .hero--archive
 {
-  background-image: url('../imgs/hero-archive_xs.jpg'); }
+  background-image: url('../imgs/hero-archive_xs.jpg'); 
+  position: relative;
+}
 
 .hero__arrow {
   position: absolute;
-  bottom: -38px;
+  bottom: 20px;
   border-left: 3px solid #fff;
   border-bottom: 3px solid #fff;
   width: 35px;
