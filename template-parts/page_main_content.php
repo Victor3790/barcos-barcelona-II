@@ -89,7 +89,7 @@
       </ul>
       <ul class="section__contact__info-group">
         <li>Mail:</li>
-        <li>info@barcosbarcelona.com</li>
+        <li><a href="mailto:info@barcosbarcelona.com">info@barcosbarcelona.com</a></li>
       </ul>
       <ul class="section__contact__info-group">
         <li>Dirección:</li>
