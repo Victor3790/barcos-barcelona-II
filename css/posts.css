@@ -69,6 +69,11 @@ label{
     height: 28px;
     cursor: pointer;
   }
+
+  img[class*="align"], img[class*="wp-image-"] {
+    width: auto;
+    height: auto;
+  }
   
   @media (min-width: 768px) {
     .widget-container{
