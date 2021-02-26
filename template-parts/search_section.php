@@ -1,4 +1,4 @@
-<div class="hero hero--archive">
+<div class="hero hero--archive" style="margin-top:0;">
       <div class="hero__title-wrapper">
         <h1 class="hero__title"> <span class="hero__title__upper">BUSCADOR DE </span>BARCOS</h1>
         <span class="hero__arrow"></span>
