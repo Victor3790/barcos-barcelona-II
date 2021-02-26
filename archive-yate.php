@@ -54,7 +54,7 @@ get_header();
 			</div>
 		</div>
 
-	</main><!-- #main -->
+	<!--</main>--><!-- #main -->
 
 <?php
-get_footer();
+get_footer('yacht_archive');
