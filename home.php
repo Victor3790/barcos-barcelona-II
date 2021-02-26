@@ -24,7 +24,7 @@ get_header();
 		<main id="main" class="site-main container">
 			<div class="row">
 				<div class="col-12">
-					<h2 style="font-size:30px; padding: 0 10px; margin-bottom: 30px;">NOTICIAS NÁUTICAS</h2>
+					<h2 style="font-size:30px; padding: 0 10px; margin-bottom: 30px; text-align:center;">NOTICIAS NÁUTICAS</h2>
 					<div class="title-line title-line--center tittle-line--black" style="margin-bottom: 25px;"></div>
 				</div>
 				<div class="col-12 col-md-8">
