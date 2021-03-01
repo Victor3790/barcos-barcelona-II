@@ -55,11 +55,12 @@ get_header();
 					<div class="row">
 						<div class="col-12">
 							<p>Más noticias</p>
-							<div class="cbt_pagination">
+							<div class="pagination">
+								<p class="pagination__pages-text">Páginas</p>
 								<?php
 								echo paginate_links(array(
-																			'prev_next' => false
-																		));
+											'prev_next' => false
+										));
 								?>
 							</div>
 						</div>

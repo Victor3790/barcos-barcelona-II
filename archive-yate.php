@@ -43,14 +43,24 @@ get_header();
 
 					endwhile;
 
-					the_posts_navigation();
-
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
 
 				endif;
 				?>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="pagination">
+						<p class="pagination__pages-text">Páginas</p>
+						<?php
+						echo paginate_links(array(
+							'prev_next' => false
+						));
+						?>
+					</div>
+				</div>
 			</div>
 		</div>
 

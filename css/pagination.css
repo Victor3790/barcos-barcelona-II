@@ -1,0 +1,35 @@
+.pagination
+{
+    position:relative; 
+    float:right;
+    padding-right: 10px;
+}
+
+.pagination__pages-text
+{
+    display:inline-block; 
+    color:#000;
+    padding-right: 1em;
+}
+
+.page-numbers
+{
+    padding: 0.3em 0.6em;
+    border: 1px solid #000;
+    color: #B9874C;
+    background-color: #000;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.page-numbers:hover
+{
+    color: #B9874C;
+    text-decoration: none;
+}
+
+.pagination .current
+{
+    background-color: transparent;
+    color: #333;
+}
