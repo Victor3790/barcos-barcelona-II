@@ -42,7 +42,6 @@ jQuery(document).ready(function($){
     });
 
     $('body').click(function(e){
-        console.log(menu.has(e.target));
         if( !menu.is( e.target ) && menu.has(e.target).length === 0 )
             close(menu);
 

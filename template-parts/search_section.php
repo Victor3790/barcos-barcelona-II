@@ -1,3 +1,8 @@
+<?php
+  global $wp_query;
+	$total = $wp_query->found_posts;
+	$on_page = $wp_query->post_count;
+?>
 <div class="hero hero--archive" style="margin-top:0;">
       <div class="hero__title-wrapper">
         <h1 class="hero__title"> <span class="hero__title__upper">BUSCADOR DE </span>BARCOS</h1>
@@ -6,11 +11,14 @@
 </div>
 <div class="search section section--dark section--justified">
     <div class="row">
-        <div class="col-9">
+        <div class="col-9 col-md-5 col-lg-4 col-xl-3">
           <h2 class="search__title">BUSCADOR DE BARCOS</h2>
         </div>
-        <div class="search__arrow__wrapper col-3">
+        <div class="search__arrow__wrapper col-3 col-md-2 col-lg-2 col-xl-2">
           <div class="search__arrow search__arrow--shows"></div>
+        </div>
+        <div class="search__counter__wrapper col col-md-5 col-lg-6 col-xl-7">
+          <p class="search__counter">Mostrando <?php echo $on_page; ?> de <?php echo $total; ?></p>
         </div>
         <div class="container-fluid search__controls">
           <div class="row">

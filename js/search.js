@@ -37,6 +37,7 @@ jQuery(document).ready(function($){
             $(this).addClass('search__arrow--shows');
             $('.search__controls').toggle('slow');
         }
+        $('.search__counter').fadeToggle('slow');
     });
 
 });

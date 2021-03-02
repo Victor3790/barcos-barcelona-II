@@ -32,6 +32,7 @@ get_header();
 
 					/* Start the Loop */
 					while ( have_posts() ) :
+						
 						the_post();
 
 						/*
@@ -53,7 +54,14 @@ get_header();
 			<div class="row">
 				<div class="col-12">
 					<div class="pagination">
-						<p class="pagination__pages-text">Páginas</p>
+						<?php
+							global $wp_query;
+							$total = $wp_query->found_posts;
+							$on_page = $wp_query->post_count; 
+						?>
+						<?php if( $total > $on_page ) : ?>
+							<p class="pagination__pages-text">Páginas</p>
+						<?php endif; ?>
 						<?php
 						echo paginate_links(array(
 							'prev_next' => false

@@ -9,6 +9,8 @@
 
 define ( 'THEME_NAME', 'barcos_barcelona' );
 define ( 'THEME_URI', get_template_directory_uri() );
+define ( 'POSTS_PER_PAGE', 3 );
+define ( 'YACHTS_PER_PAGE', 5);
 
 //Action hooks
 
@@ -38,6 +40,9 @@ add_action( 'init', 'cptui_register_my_cpts_yate' );
 
 include (get_theme_file_path('/inc/cbt_yate_taxonomies.php'));
 add_action( 'init', 'cptui_register_my_taxes' );
+
+include (get_theme_file_path('/inc/cbt_custom_queries.php'));
+add_action( 'pre_get_posts', 'cbt_customize_queries' );
 
 //Filter hooks
 
