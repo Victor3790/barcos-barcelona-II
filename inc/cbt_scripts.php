@@ -43,6 +43,10 @@ function cbt_scripts() {
 						  array(THEME_NAME . '_slick'),
 						  true );
 
+		wp_enqueue_style( THEME_NAME . '_google_fonts', 
+						  'https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap', 
+						  false ); 
+
 	}
 
 	if ( is_singular('yate') ){

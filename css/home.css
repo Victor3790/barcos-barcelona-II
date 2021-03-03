@@ -92,6 +92,22 @@
   float: left;
 }
 
+.news-link {
+  color: #B9874C; 
+  font-size: 20px; 
+  text-decoration:none; 
+  font-family: 'EB Garamond', serif;
+  letter-spacing: 1px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.news-link:hover {
+  color: #B9874C; 
+  text-decoration:none;
+}
+
 @media (min-width: 768px) {
   .section__info {
     height: 600px;  
@@ -119,7 +135,11 @@
   .section--left {
     float: left; }
   .section--right {
-    float: right; } }
+    float: right; } 
+  .news-link {
+    text-align: left;
+  }
+ }
 
 @media (min-width: 992px) {
   .section__text p {

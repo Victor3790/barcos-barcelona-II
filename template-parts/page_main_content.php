@@ -16,6 +16,11 @@
           catamaranes únicos. Disfrute de un servicio totalmente personalizado, diseñado 
           para cubrir todas sus necesidades
         </p>
+        <br>
+        <br>
+        <p>
+          <a class="news-link" href="#news">Últimas novedades</a>
+        </p>
       </div>
     </div>
   </div>
@@ -99,7 +104,7 @@
       </ul>
     </div>
   </div>
-  <div class="section section--justified section--white">
+  <div id="news" class="section section--justified section--white">
     <div class="section__ships">
       <div>
         <div class="section__ships__title">
@@ -108,7 +113,7 @@
         <div id="bb_news">
           <?php
 
-          $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>4));
+          $posts = new WP_Query(array('post_type'=>'post', 'posts_per_page'=>20));
 
           if ( $posts->have_posts() ) :
             
