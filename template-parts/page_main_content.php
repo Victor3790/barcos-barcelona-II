@@ -18,7 +18,7 @@
         </p>
         <br>
         <br>
-        <p>
+        <p style="margin:0;">
           <a class="news-link" href="#news">Últimas novedades</a>
         </p>
       </div>

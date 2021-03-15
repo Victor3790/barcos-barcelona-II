@@ -1,4 +1,4 @@
- <?php
+<?php
  /**
   * Add custom classes to custom logo.
   */
