@@ -21,7 +21,7 @@
 .section__picture__img {
   margin: 0;
   height: 800px;
-  width: 540px;
+  width: 100%;
   background-size: cover;
   background-position: center;
 }
@@ -62,12 +62,12 @@
 @media (min-width: 576px) { 
   .section__picture__img {
     margin: 0;
-    width: 740px; }}
+    /*width: 740px;*/ }}
 
 @media (min-width: 768px) {
   .section__picture__img {
     margin: 0;
-    width: 1040px; }}
+    /*width: 1040px;*/ }}
 
 @media (min-width: 992px) {
   .yacht-info-container {
@@ -78,7 +78,7 @@
     float: left;} 
   .section__picture__img {
     margin: 0;
-    width: 1340px; }
+    /*width: 1340px;*/ }
   .yacht-container {
     height: auto;
     overflow: hidden;
@@ -92,5 +92,5 @@
     width: 32%; }
   .section__picture__img {
     margin: 0;
-    width: 1540px; }}
+    /*width: 1540px;*/ }}
 
