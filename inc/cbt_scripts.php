@@ -63,6 +63,10 @@ function cbt_scripts() {
 						  THEME_URI . '/js/yacht_container.js',
 						  array('jquery'),
 						  true );
+
+		wp_enqueue_style( THEME_NAME . '_google_fonts', 
+						  'https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap', 
+						  false ); 
 	}
 
 	if ( is_singular() ){

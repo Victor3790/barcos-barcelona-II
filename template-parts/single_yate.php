@@ -70,7 +70,7 @@
 			<div class="yacht-info-container">
 				<div class="section section--white section--justified yacht-info">
 					<h2 class="yacht-info__title" style="text-transform:uppercase;"><?php the_title(); ?></h2>
-					<div class="row">
+					<div id="info_row" class="row">
 						<div class="col-12 col-md-6">
 							<ul class="yacht-info__list">
 								<li class="yacht-info__list__item yacht-info--bold">ESPECIFICACIONES</li>
@@ -118,8 +118,11 @@
 							</ul>
 
 						</div>
-						<div class="col-12 col-md-6" style="margin-top: 25px;">
+						<div id="yacht_text_content" class="col-12 col-md-6" style="margin-top: 25px;">
 							<?php the_content(); ?>
+							<div id="more_pics" class="yacht_more_pics">
+								<p id="more_pics_p"><i>Ver más fotografías</i></p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -163,6 +166,9 @@
 								</span>
 							</div>	
 							<?php echo do_shortcode( '[contact-form-7 id="243" title="Main"]' ); ?>
+							<div class="yacht_more_pics_info">
+								<p class="yacht_more_pics_info_p"><i>Ver más fotografías</i></p>
+							</div>
 						</div>
 					</div>
 				</div>

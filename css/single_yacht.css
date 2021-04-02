@@ -28,11 +28,11 @@
 
 .yacht-info {
   padding-top: 55px;
-  padding-bottom: 55px; }
+  /*padding-bottom: 55px;*/ }
 
 .charter-info {
   padding-top: 55px;
-  padding-bottom: 55px; }
+  /*padding-bottom: 55px;*/ }
 
 .yacht-info--bold {
   font-weight: 900; }
@@ -59,6 +59,22 @@
   width: 50%;
   text-align: right; }
 
+.yacht_more_pics {
+  display: none;
+}
+
+.yacht_more_pics_info {
+  width:100%;
+  margin-top: 50px;
+}
+
+.yacht_more_pics_info_p {
+  width:100%;
+  text-align:center;
+  font-size: 20px!important;
+  font-family: 'EB Garamond', serif!important;
+}
+
 @media (min-width: 576px) { 
   .section__picture__img {
     margin: 0;
@@ -82,6 +98,16 @@
   .yacht-container {
     height: auto;
     overflow: hidden;
+  }
+  .yacht_more_pics {
+    width:100%;
+    display: block;
+    text-align:center;
+    font-size: 18px!important;
+    font-family: 'EB Garamond', serif!important;
+  }
+  .yacht_more_pics_info {
+    display: none;
   }
 }
 

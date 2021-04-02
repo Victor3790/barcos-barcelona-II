@@ -1,4 +1,6 @@
 jQuery(document).ready(function($){
+    $("html"). on("contextmenu",function(e){ return false; });
+    
     let menu            = $('#menu');
     let search          = $('#search');
     let window_width    = $( window ).width();
