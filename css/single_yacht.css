@@ -59,7 +59,7 @@
   width: 50%;
   text-align: right; }
 
-.yacht_more_pics {
+.yacht_after_info {
   display: none;
 }
 
@@ -73,6 +73,7 @@
   text-align:center;
   font-size: 20px!important;
   font-family: 'EB Garamond', serif!important;
+  margin: 0;
 }
 
 @media (min-width: 576px) { 
@@ -99,15 +100,36 @@
     height: auto;
     overflow: hidden;
   }
-  .yacht_more_pics {
-    width:100%;
+  .yacht_after_info {
+    padding: 15px 0 15px 0;
     display: block;
+    overflow: hidden;
+  }
+  .yacht_more_pics {
+    width:68%;
+    float: left;
     text-align:center;
     font-size: 18px!important;
     font-family: 'EB Garamond', serif!important;
   }
+  .yacht_back_to_search a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif!important;
+    color: #7d7c7c;
+  }
+  .yacht_back_to_search a:hover {
+    color: #7d7c7c;
+  }
   .yacht_more_pics_info {
     display: none;
+  }
+  .yacht_back_to_search {
+    width: 32%;
+    height: 100%;
+    float: left;
   }
 }
 

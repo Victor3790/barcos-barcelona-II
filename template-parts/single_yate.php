@@ -120,9 +120,9 @@
 						</div>
 						<div id="yacht_text_content" class="col-12 col-md-6" style="margin-top: 25px;">
 							<?php the_content(); ?>
-							<div id="more_pics" class="yacht_more_pics">
+							<!--<div id="more_pics" class="yacht_more_pics">
 								<p id="more_pics_p"><i>Ver más fotografías</i></p>
-							</div>
+							</div>-->
 						</div>
 					</div>
 				</div>
@@ -172,6 +172,21 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div class="yacht_after_info">
+			<div class="yacht_more_pics">
+				<div class="row">
+					<div class="col-6"></div>
+					<div class="col-6">
+						<p class="yacht_more_pics_info_p"><i>Ver más fotografías</i></p>
+					</div>
+				</div>
+			</div>
+			<div class="yacht_back_to_search">
+				<a href="<?php echo home_url('yate'); ?>">
+					<i>Volver a la búsqueda</i>
+				</a>
 			</div>
 		</div>
 		<div>
