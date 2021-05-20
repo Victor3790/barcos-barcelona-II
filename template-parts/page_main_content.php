@@ -1,12 +1,12 @@
   <div class="hero hero--home"></div>
-  <div class="section section__info section--dark">
-    <div class="section__picture section--left">
+  <div class="section section__info section--white">
+    <div class="section__picture section--right">
       <div  class="section__picture__img" 
             style="background-image: url(<?php echo THEME_URI; ?>/imgs/section1.jpg)">
       </div>
     </div>
     <div class="section__text__wrapper section--center">
-      <div class="section__text section--left">
+      <div class="section__text section--right">
         <h2>ALQUILER DE YATES</h2>
         <p>
           En Barcos Barcelona S.L., ofrecemos servicio de alquiler de yates y alquiler 
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <div class="section section__info section--white">
+  <!--<div class="section section__info section--white">
     <div class="section__picture section--right">
       <div  class="section__picture__img" 
             style="background-image: url(<?php echo THEME_URI; ?>/imgs/section2.jpg)">
@@ -43,7 +43,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </div>-->
   <div class="section section__info section--dark">
     <div class="section__picture section--left">
       <div  class="section__picture__img" 
