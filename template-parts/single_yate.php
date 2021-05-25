@@ -129,7 +129,12 @@
 			</div>
 			<div class="yacht-contact-container">
 				<div class="section section--dark section--justified charter-info" style="text-align: center;">
-					<h2 class="yacht-info__title">INFORMACIÓN DE ALQUILER</h2>
+					<?php if( is_singular( 'yate' ) ) : ?>
+						<h2 class="yacht-info__title">INFORMACIÓN DE ALQUILER</h2>
+					<?php endif; ?>
+					<?php if( is_singular( 'yate_venta' ) ) : ?>
+						<h2 class="yacht-info__title">INFORMACIÓN DE VENTA</h2>
+					<?php endif; ?>
 					<div class="row">
 						<div class="col-12">
 							<ul class="yacht-info__list">
@@ -142,20 +147,22 @@
 									<span class="yacht-info__list__item-name"><?php echo $charter_info['price'] ?></span>
 								</li>
 							</ul>
-							<ul class="yacht-info__list" style="margin-top: 38px;">
-								<li class="yacht-info__list__item">
-									<span class="yacht-info__list__item-name yacht-info--bold">
-										AREAS DE NAVEGACIÓN
-									</span>
-								</li>
-								<li class="yacht-info__list__item">
-									<span class="yacht-info__list__item-name">
-										<?php 
-											echo $areas_string;
-										?>
-									</span>
-								</li>
-							</ul>
+							<?php if( is_singular( 'yate' ) ) : ?>
+								<ul class="yacht-info__list" style="margin-top: 38px;">
+									<li class="yacht-info__list__item">
+										<span class="yacht-info__list__item-name yacht-info--bold">
+											AREAS DE NAVEGACIÓN
+										</span>
+									</li>
+									<li class="yacht-info__list__item">
+										<span class="yacht-info__list__item-name">
+											<?php 
+												echo $areas_string;
+											?>
+										</span>
+									</li>
+								</ul>
+							<?php endif; ?>
 						</div>
 					</div>
 					<div class="row">

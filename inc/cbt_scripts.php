@@ -48,7 +48,7 @@ function cbt_scripts() {
 
 	}
 
-	if ( is_singular('yate') ){
+	if ( is_singular('yate') || is_singular('yate_venta') ){
 
 		wp_enqueue_style( THEME_NAME . '_single', 
 						  THEME_URI . '/css/single_yacht.css' );
@@ -105,6 +105,19 @@ function cbt_scripts() {
 						  THEME_URI . '/js/search.js',
 						  array(THEME_NAME . '_search_slider'),
 						  true );
+	}
+
+	if(is_post_type_archive('yate_venta')){
+
+		wp_enqueue_style( THEME_NAME . '_bootstrap_grid', 
+						  THEME_URI . '/css/bootstrap_grid.css' );
+
+		wp_enqueue_style( THEME_NAME . '_archive', 
+						  THEME_URI . '/css/yacht_archive.css' );
+
+		wp_enqueue_style( THEME_NAME . '_pagination', 
+						  THEME_URI . '/css/pagination.css' );
+
 	}
 
 	if ( is_home() || is_search() ){

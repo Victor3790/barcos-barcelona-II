@@ -34,5 +34,40 @@ function cptui_register_my_cpts_yate() {
 	];
 
 	register_post_type( "yate", $args );
+
+	/**
+	 * Post Type: yates_venta.
+	*/
+
+	$labels_venta = [
+		"name" => __( "yates_venta", "barcos_barcelona" ),
+		"singular_name" => __( "yate_venta", "barcos_barcelona" ),
+	];
+
+	$args_venta = [
+		"label" => __( "yates_venta", "barcos_barcelona" ),
+		"labels" => $labels_venta,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => [ "slug" => "yate_venta", "with_front" => true ],
+		"query_var" => true,
+		"supports" => [ "title", "editor", "thumbnail" ],
+	];
+
+	register_post_type( "yate_venta", $args_venta );
+
 }
 

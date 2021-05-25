@@ -9,6 +9,13 @@ body, html, main, #page {
   position: relative;
 }
 
+.hero--venta-archive
+{
+  height: 100%!important;
+  background-image: url('../imgs/hero_venta.jpg'); 
+  position: relative;
+}
+
 .hero__arrow {
   position: absolute;
   bottom: 50px;
