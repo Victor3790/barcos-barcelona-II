@@ -43,7 +43,7 @@ function cbt_scripts() {
 						  true );
 
 		wp_enqueue_style( THEME_NAME . '_google_fonts', 
-						  'https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&display=swap', 
+						  'https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap', 
 						  false ); 
 
 	}

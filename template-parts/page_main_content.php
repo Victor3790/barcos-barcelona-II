@@ -1,4 +1,6 @@
-  <div class="hero hero--home"></div>
+  <div class="hero hero--home hero-home">
+    <h1 class="hero-home__text">ALQUILER DE YATES Y BARCOS EN IBIZA</h1>
+  </div>
   <div class="section section__info section--white">
     <div class="section__picture section--right">
       <div  class="section__picture__img" 
@@ -24,26 +26,6 @@
       </div>
     </div>
   </div>
-  <!--<div class="section section__info section--white">
-    <div class="section__picture section--right">
-      <div  class="section__picture__img" 
-            style="background-image: url(<?php echo THEME_URI; ?>/imgs/section2.jpg)">
-      </div>
-    </div>
-    <div class="section__text__wrapper section--center">
-      <div class="section__text section--right">
-        <h2>PRIVILEGIO</h2>
-        <p>
-          Viva una experiencia inolvidable navegando por los destinos más exclusivos 
-          del Mediterráneo y Caribe con nuestro servicio de alquiler de yates en Ibiza, 
-          alquiler de yates en Mallorca, alquiler de yates en Menorca, alquiler de yates 
-          en Barcelona, yates de alquiler en Costa Brava, yates de alquiler en Caribe, 
-          yates de alquiler en Bahamas, yates de alquiler en Rivera Francesa, barcos de 
-          alquiler en Cerdeña, barcos de alquiler en Grecia.
-        </p>
-      </div>
-    </div>
-  </div>-->
   <div class="section section__info section--dark">
     <div class="section__picture section--left">
       <div  class="section__picture__img" 

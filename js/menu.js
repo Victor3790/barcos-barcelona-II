@@ -43,14 +43,14 @@ jQuery(document).ready(function($){
         e.stopPropagation();
     });
 
-    $('body').click(function(e){
+    /*$('body').click(function(e){
         if( !menu.is( e.target ) && menu.has(e.target).length === 0 )
             close(menu);
 
         if( !search.is( e.target ) && search.has(e.target).length === 0 )
             close(search);
 
-    });
+    });*/
 
     function open( window, to_close )
     {
