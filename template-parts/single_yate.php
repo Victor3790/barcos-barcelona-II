@@ -191,9 +191,19 @@
 				</div>
 			</div>
 			<div class="yacht_back_to_search">
-				<a href="<?php echo home_url('yate'); ?>">
-					<i>Volver a la búsqueda</i>
-				</a>
+				<?php if( is_singular( 'yate' ) ) : ?>
+
+					<a href="<?php echo home_url('yate'); ?>">
+						<i>Volver a la búsqueda</i>
+					</a>
+
+				<?php else : ?>	
+
+					<a href="<?php echo home_url('yate_venta'); ?>">
+						<i>Volver a la búsqueda</i>
+					</a>
+
+				<?php endif; ?>
 			</div>
 		</div>
 		<div>
