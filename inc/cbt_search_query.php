@@ -12,8 +12,10 @@ function cbt_search_query( $query ){
   if( empty( $search_nonce ) )
     return;
 
-  if( ! wp_verify_nonce( $search_nonce, 'yatch_search' ) )
+  if( ! wp_verify_nonce( $search_nonce, 'yatch_search' ) ) {
+    error_log('Custom base theme: Incorrect search nonce.');
     return;
+  }
 
   $meta_query = array();
   $tax_query = array();
